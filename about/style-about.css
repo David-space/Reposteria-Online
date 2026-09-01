@@ -1,0 +1,818 @@
+@import url('https://googleapis.com');
+@import url('https://fonts.googleapis.com/css2?family=Sansita:ital,wght@0,400;0,700;0,800;0,900;1,400;1,700;1,800;1,900&display=swap');
+
+
+
+html {
+    scroll-behavior: smooth
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    max-width: 100%;
+    background: #ffffff;
+    overflow-x: hidden;
+}
+
+.navbar-set {
+    background-color: #FC4444;
+    max-width: 100%;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 100px;
+    position: relative;
+    margin: 0 auto;
+    max-width: 1500px;
+    border-bottom: 2px solid #F9F2F2;
+}
+
+.logo {
+    cursor: pointer;
+    transition: all 0.3s ease;
+    line-height: 0; /* evita espacio extra bajo la imagen */
+}
+
+.logo:hover {
+    transform: scale(1.1);
+}
+
+.nav-links {
+    display: flex;
+    gap: 50px;
+    list-style: none;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 14px;
+    position: relative;
+    font-family: "Nunito Sans", sans-serif;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 0%;
+    height: 2px;
+    background: #F9F2F2;
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: #eeeeee;
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+    width: 100%;
+}
+
+.button-nav {
+    padding: 12px 20px;
+    font-size: 15px;
+    font-weight: 700;
+    color: #FC4444;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background-color: #ffffff;
+}
+
+.button-nav:hover {
+    transform: scale(1.1);
+}
+
+/*--- Seccion de hero ---*/
+.hero {
+    width: 100%;
+    background: #FC4444;
+}
+
+.hero-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+    padding: 100px 80px;
+    overflow: hidden;
+    flex-wrap: wrap;
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+.hero-text {
+    position: relative;
+    max-width: 600px;
+}
+
+h1 {
+    font-size: 64px;
+    position: relative;
+    color: #ffffff;
+    font-family: "Sansita", sans-serif;
+    margin-bottom: 10px;
+    line-height: 1.1;
+    text-align: center;
+}
+
+.hero-text p {
+    color: #f3eeee;
+    font-family: "Nunito Sans", sans-serif;
+    font-size: 15px;
+    text-align: center;
+}
+
+.section-about {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.target-wave {
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    position: relative;
+    background-color: #FC4444;
+    margin-top: -1px;
+    margin-bottom: 90px;
+}
+
+.target-wave svg {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 90px;
+}
+
+.about-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    gap: 50px;
+    margin-bottom: 100px;
+    padding: 0 20px;
+
+}
+
+.about-img {
+    width: 500px;
+    max-width: 100%;
+    flex-shrink: 0; /* Evita que la columna de la imagen se aplaste */
+    transition: all 0.3s ease;
+    border-radius: 25px;
+    box-shadow: 0 8px 20px rgba(255, 129, 140, 0.3);
+}
+
+.about-image {
+    height: 450px;         /* Ajusta esta altura a tu gusto */
+    border-radius: 25px;   /* Bordes redondeados perfectos */
+    overflow: hidden;      /* Corta la imagen para que respete las esquinas */
+}
+.about-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;     /* Recorta y llena el marco sin deformar */
+    object-position: center; /* Centra el enfoque de la foto */
+}
+
+.about-img:hover {
+    transform: scale(1.04);
+    box-shadow: 0 16px 32px rgba(156, 56, 56, 0.199);
+}
+
+.about-text {
+    position: relative;
+    max-width: 500px;
+}
+
+.about-text h2 {
+    font-size: 36px;
+    font-family: "Sansita", sans-serif;
+    line-height: 1.25;
+    margin-bottom: 20px;
+
+}
+
+.about-text p {
+    font-size: 15px;
+    font-family: "Nunito Sans", sans-serif;
+    color: #5b5b5b;
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+.highlight-number {
+    color: #ff4757;
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.btn-about {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 12px 28px;
+    background-color: #FC4444;
+    color: #fff;
+    font-family: "Nunito Sans", sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+    text-decoration: none;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 18px rgba(255, 71, 87, 0.3);
+}
+
+.btn-about:hover {
+    background-color: #e13232;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(252, 68, 68, 0.35);
+}
+
+
+:root {
+            --primary: #ff4757;
+            --primary-soft: #fff0f2;
+            --text-dark: #2d3436;
+            --text-muted: #636e72;
+            --bg-light: #f8f9fa;
+            --white: #ffffff;
+            --shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            --radius: 20px;
+
+            /* Variable con la URL de TU imagen única para cambiarla fácilmente */
+            --bg-image: url('/Imagenes/Haciendo-postre-2.png');
+        }
+
+.container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* --- SECCIÓN 1: STATS BANNER --- */
+        .stats-section {
+            margin-bottom: 60px;
+            position: relative;
+            z-index: 10;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            background: var(--white);
+            padding: 30px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            text-align: center;
+        }
+
+        .stat-card h3 {
+            font-size: 30px;
+            color: var(--primary);
+            font-weight: 700;
+            font-family: 'Sansita', sans-serif;
+            margin-bottom: 5px;
+        }
+
+        .stat-card p {
+            color: var(--text-muted);
+            font-size: 13px;
+            font-weight: 600;
+            font-family: "Nunito Sans", sans-serif;
+        }
+
+        /* --- SECCIÓN 2: PILARES / CARACTERÍSTICAS --- */
+        .features-section {
+            margin-bottom: 70px;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 1.8rem;
+            margin-bottom: 40px;
+            color: var(--text-dark);
+            font-family: "Sansita", sans-serif;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .feature-card {
+            background: var(--white);
+            padding: 35px 25px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            transition: transform 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--primary-soft);
+            color: var(--primary);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+        }
+
+        .feature-card h4 {
+            font-size: 1.25rem;
+            margin-bottom: 12px;
+            font-family: "Sansita", sans-serif;
+        }
+
+        .feature-card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        /* --- SECCIÓN 3: BANNER EBOOK (HOTMART) --- */
+        .ebook-section {
+            margin-bottom: 70px;
+        }
+
+        .ebook-card {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .image-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 180px 180px; /* Definimos las alturas de filas */
+            gap: 16px;
+            height: 380px; /* Altura total del bloque */
+            width: 100%;
+        }
+
+        .tile {
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+            position: relative;
+
+            /* Todas las tarjetas cargan LA MISMA IMAGEN */
+            background-image: url('../Imagenes/Haciendo-postre-2.png');
+
+            /* Mantiene la proporción horizontal fija del bloque de imágenes para alinearlas */
+            background-size: 525px 376px; 
+            background-repeat: no-repeat;
+            transition: transform 0.3s ease;
+        }
+
+        .tile:hover {
+            transform: scale(1.02);
+        }
+
+        /* 1. Tarjeta Superior Izquierda */
+        .tile-top-left {
+            background-position: left top; /* Muestra la esquina superior izquierda */
+        }
+
+
+        /* 2. Tarjeta Superior Derecha */
+        .tile-top-right {
+            background-position: right top; /* Muestra la esquina superior derecha */
+        }
+
+        /* 3. Tarjeta Inferior Ancha */
+        .tile-bottom-wide {
+            grid-column: 1 / -1;
+            background-position: center bottom; /* Muestra la parte inferior de la imagen */
+        }
+
+
+
+        .badge-ebook {
+            display: inline-block;
+            color: var(--white);
+            font-size: 0.8rem;
+            font-weight: 700;
+            padding: 5px 15px;
+            border-radius: 50px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+        }
+
+        .ebook-card h3 {
+            font-family: "Sansita", sans-serif;
+            font-size: 35px;
+            color: var(--text-dark);
+            margin-bottom: 10px;
+        }
+
+        .ebook-card p {
+            color: var(--text-muted);
+            max-width: 650px;
+            margin: 0 auto;
+            font-size: 15px;
+            margin-bottom: 10px;
+            font-family: "Nunito Sans", sans-serif;
+            line-height: 1.4;
+        }
+
+        .btn-primary {
+            display: inline-block;
+            background-color: var(--primary);
+            color: var(--white);
+            font-family: "Nunito Sans", sans-serif;
+            font-weight: 700;
+            font-size: 15px;
+            padding: 12px 28px;
+            border-radius: 50px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 20px rgba(255, 71, 87, 0.3);
+            margin-top: 10px;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 25px rgba(255, 71, 87, 0.4);
+        }
+
+        /* --- SECCIÓN 4: COMUNIDAD FACEBOOK --- */
+        .community-section {
+            background: var(--white);
+            border-radius: var(--radius);
+            padding: 40px;
+            text-align: center;
+            box-shadow: var(--shadow);
+            margin-bottom: 60px;
+        }
+
+        .community-section h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            font-family: "Sansita", sans-serif ;
+        }
+
+        .community-section p {
+            color: var(--text-muted);
+            margin-bottom: 20px;
+        }
+
+        .btn-secondary {
+            display: inline-block;
+            background-color: #1877f2;
+            color: var(--white);
+            font-weight: 600;
+            padding: 12px 28px;
+            border-radius: 50px;
+            text-decoration: none;
+            transition: background 0.3s ease;
+        }
+
+        .btn-secondary:hover {
+            background-color: #1464cc;
+        }
+
+
+
+        @media (max-width: 768px) {
+            .ebook-card {
+                padding: 30px 20px;
+            }
+            .ebook-card h3 {
+                font-size: 1.4rem;
+            }
+
+            .about-content {
+                flex-direction: column;
+                padding: 30px 20px;
+                text-align: center;
+            }
+
+            .about-image {
+                width: 100%;
+            }
+
+            .about-text {
+                max-width: 100%;
+            }
+        }
+
+/*--- Footer Section ---*/
+
+.target-wave-footer {
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    position: relative;
+    background-color: #ffffff;
+    margin-top: -1px;
+
+}
+
+.target-wave-footer svg {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 90px;
+}
+
+.footer-set {
+    width: 100%;
+    background: #2B2320;
+    padding: 60px 20px 0;
+  }
+ 
+  .footer-content {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+  }
+ 
+  .set-subscribe {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    background: linear-gradient(135deg, #FC4444 0%, #d93232 100%);
+    border-radius: 24px;
+    padding: 50px 60px;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+  }
+ 
+  .set-subscribe::before {
+    content: "";
+    position: absolute;
+    top: -60px; right: -60px;
+    width: 220px; height: 220px;
+    background: rgba(255,255,255,0.08);
+    border-radius: 50%;
+  }
+ 
+  .set-subscribe::after {
+    content: "";
+    position: absolute;
+    bottom: -80px; right: 120px;
+    width: 180px; height: 180px;
+    background: rgba(255,255,255,0.05);
+    border-radius: 50%;
+  }
+ 
+  .text-subscribe-set {
+    flex: 1;
+    position: relative;
+    z-index: 1;
+  }
+ 
+  .text-subscribe-set h2 {
+    font-size: 28px;
+    font-family: "Sansita", sans-serif;
+    color: #ffffff;
+    margin-bottom: 10px;
+    line-height: 1.25;
+  }
+ 
+  .text-subscribe-set p {
+    font-size: 14px;
+    font-family: "Nunito Sans", sans-serif;
+    color: rgba(255,255,255,0.80);
+    line-height: 1.6;
+  }
+ 
+  .subscribe-form {
+    flex-shrink: 0;
+    position: relative;
+    z-index: 1;
+  }
+ 
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+ 
+  .email {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+ 
+  .email label {
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    font-family: "Nunito Sans", sans-serif;
+    color: rgba(255,255,255,0.75);
+  }
+ 
+  .email input {
+    border-radius: 50px;
+    border: 2px solid rgba(255,255,255,0.25);
+    padding: 12px 22px;
+    font-size: 14px;
+    font-family: "Nunito Sans", sans-serif;
+    background: rgba(255,255,255,0.15);
+    color: #ffffff;
+    width: 280px;
+    outline: none;
+    transition: border 0.3s ease, background 0.3s ease;
+  }
+ 
+  .email input::placeholder { color: rgba(255,255,255,0.55); }
+ 
+  .email input:focus {
+    border-color: rgba(255,255,255,0.70);
+    background: rgba(255,255,255,0.22);
+  }
+ 
+  .btn-send {
+    padding: 12px 28px;
+    border-radius: 50px;
+    border: none;
+    background: #ffffff;
+    color: #FC4444;
+    font-size: 15px;
+    font-weight: 700;
+    font-family: "Sansita", sans-serif;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+  }
+ 
+  .btn-send:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 22px rgba(0,0,0,0.20);
+  }
+ 
+  .subscribe-success {
+    display: none;
+    font-family: "Nunito Sans", sans-serif;
+    font-size: 13px;
+    color: rgba(255,255,255,0.85);
+    text-align: center;
+    padding-top: 6px;
+  }
+ 
+  /* ============================
+     FOOTER — Pie de página
+     ============================ */
+ 
+  .footer-bottom {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr;
+    gap: 50px;
+    padding: 50px 0;
+    border-top: 1px solid rgba(255,255,255,0.08);
+  }
+ 
+  .footer-brand p {
+    font-family: "Nunito Sans", sans-serif;
+    font-size: 13.5px;
+    color: rgba(255,255,255,0.55);
+    line-height: 1.7;
+    margin-top: 14px;
+    max-width: 280px;
+  }
+ 
+  .footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+  }
+ 
+  .footer-logo-text {
+    font-family: "Sansita", sans-serif;
+    font-size: 22px;
+    color: #ffffff;
+  }
+ 
+  .footer-logo-text span { color: #ffd044; }
+ 
+  .footer-socials {
+    display: flex;
+    gap: 10px;
+    margin-top: 22px;
+  }
+ 
+  .social-btn {
+    width: 36px; height: 36px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.08);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: background 0.3s ease, transform 0.2s ease;
+  }
+ 
+  .social-btn:hover {
+    background: #FC4444;
+    transform: translateY(-3px);
+  }
+ 
+  .social-btn svg { width: 16px; height: 16px; fill: #ffffff; }
+ 
+  .footer-col h4 {
+    font-family: "Sansita", sans-serif;
+    font-size: 16px;
+    color: #ffffff;
+    margin-bottom: 18px;
+    position: relative;
+    padding-bottom: 10px;
+  }
+ 
+  .footer-col h4::after {
+    content: "";
+    position: absolute;
+    bottom: 0; left: 0;
+    width: 28px; height: 2px;
+    background: #FC4444;
+    border-radius: 2px;
+  }
+ 
+  .footer-col ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+ 
+  .footer-col ul li a {
+    text-decoration: none;
+    font-family: "Nunito Sans", sans-serif;
+    font-size: 13.5px;
+    color: rgba(255,255,255,0.55);
+    transition: color 0.3s ease;
+  }
+ 
+  .footer-col ul li a:hover { color: #ffd044; }
+ 
+  .footer-copyright {
+    text-align: center;
+    padding: 20px;
+    border-top: 1px solid rgba(255,255,255,0.06);
+    font-family: "Nunito Sans", sans-serif;
+    font-size: 12.5px;
+    color: rgba(255,255,255,0.30);
+  }
+ 
+  .footer-copyright span { color: #FC4444; }
+ 
+  @media (max-width: 860px) {
+    .set-subscribe {
+      flex-direction: column;
+      padding: 40px 30px;
+      gap: 30px;
+      text-align: center;
+    }
+    .email input { width: 100%; }
+    .footer-bottom { grid-template-columns: 1fr 1fr; }
+    .footer-brand { grid-column: 1 / -1; }
+  }
+ 
+  @media (max-width: 520px) {
+    .footer-bottom { grid-template-columns: 1fr; }
+  }
+
+
