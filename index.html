@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recetas de Postres Fáciles y Deliciosos | Reposteria Online</title>
+    <meta name="description" content="Descubre las mejores recetas de postres, tartas y repostería paso a paso. Aprende a preparar postres increíbles desde casa para tu familia o para emprender.">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <nav class="navbar-set">
+        <div class="navbar">
+            <div class="logo">
+                <img src="../Imagenes/logo.png" width="55px" height="55px" alt="Logo">
+            </div>
+            <div class="nav-links" id="navLinks">
+                <li><a href="#">Inicio</a></li>
+                <li><a href="../Tips/tips.html">Tips</a></li>
+                <li><a href="../curso/curso.html">Curso</a></li>
+                <li><a href="../about/about.html">Sobre nosotros</a></li>
+            </div>
+            <div class="button">
+                <a href="https://www.facebook.com/profile.php?id=61555227377096" target="_blank">
+                    <button class="button-nav">¡VISITANOS!</button>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-text">
+                <div class="text-bubble">
+                    <p>POSTRES DELICIOSOS</p>
+                </div>
+                <h1>Las recetas mas deliciosas</h1>
+                <p class="hero-one">Aprende a preparar los mejores postres paso a paso con combinaciones únicas y divertidas.</p>
+
+                <div class="buttons">
+                    <a href="../curso/curso.html">
+                        <button class="btn btn-primary">
+                            Aprende mas
+                        </button>
+                    </a>
+                </div>
+            </div>
+
+            <div class="hero-image">
+                <div class="blob"></div>
+                <img class="img-hero" src="../Imagenes/postre de fresa hero.png" alt="Postre-de-fresa">
+            </div>
+
+        </div>
+
+
+    </section>
+
+    <section class="section-card">
+        <!-- OLA DECORATIVA -->
+        <div class="target-wave">
+            <svg viewBox="0 0 1440 100" preserveAspectRatio="none">
+            <path fill="#fff" d="M0,60 C90,20 150,20 240,60 C330,100 390,100 480,60 C570,20 630,20 720,60 C810,100 870,100 960,60 C1050,20 1110,20 1200,60 C1290,110 1350,110 1440,60 L1440,120 L0,120 Z"></path>
+            </svg>
+        </div>
+
+        <div class="features-wrapper">
+        <div class="features-card">
+            <div class="feature-item">
+
+                <div class="icon-card">
+                    <svg viewBox="0 0 64 64" class="custom-icon">
+                        <path d="M26 4h12v4H26zM42 12l4-4 3 3-4 4zM8 28h12v4H8zM4 38h8v4H4zM12 48h12v4H12z"/>
+                        <circle cx="36" cy="38" r="20" fill="none" stroke="currentColor" stroke-width="4"/>
+                        <path d="M36 26v12l8 8" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
+                    </svg>
+                </div>
+                <p>Rapido y facil</p>
+
+            </div>
+            <div class="feature-item">
+
+                <div class="icon-card">
+                    <svg viewBox="0 0 64 64" class="custom-icon">
+                        <path d="M42 8l6 3-10 20H26L38 8z" fill="none" stroke="currentColor" stroke-width="4" stroke-linejoin="round"/>
+                        <path d="M22 20c-4-6 2-12 8-10 4-6 12-2 10 4" fill="none" stroke="currentColor" stroke-width="3"/>
+                        <path d="M12 30h40s-2 22-20 22S12 30 12 30z" fill="none" stroke="currentColor" stroke-width="4" stroke-linejoin="round"/>
+                        <circle cx="22" cy="38" r="2" fill="currentColor"/>
+                        <circle cx="32" cy="38" r="2" fill="currentColor"/>
+                        <circle cx="42" cy="38" r="2" fill="currentColor"/>
+                    </svg>
+                </div>
+                <p>Ingredientes fáciles</p>
+
+            </div>
+            <div class="feature-item">
+
+                <div class="icon-card">
+                    <svg viewBox="0 0 64 64" class="custom-icon">
+                        <circle cx="32" cy="32" r="26" fill="none" stroke="currentColor" stroke-width="4"/>
+                        <path d="M20 24c4-4 8-4 12 0M32 24c4-4 8-4 12 0" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
+                        <path d="M20 38c6 10 18 10 24 0" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
+                        <path d="M38 43c2 6 8 5 8 0" fill="currentColor"/>
+                    </svg>
+                </div>
+                <p>Postres deliciosos</p>
+
+            </div>
+        </div>
+        </div>
+
+    </section>
+
+    <section class="setion-recipes" id="recetas">
+
+        <div class="header-recipes">
+            <h2 class="title-recipes">Nuestras Recetas</h2>
+            <p class="text-header">Encuentra tus postres favoritos paso a paso y sorprende a todos en casa.</p>
+        </div>
+
+        <div class="search-filter-container">
+            <div class="search-box">
+                <input type="text" id="recipeSearchInput" placeholder="Buscar receta...">
+                <button class="btn-search" id="recipeSearchBtn">Buscar</button>
+            </div>
+
+            <div class="filter-pills">
+                <button class="pill active" data-category="todos">Todos</button>
+                <button class="pill" data-category="helados">Helados</button>
+                <button class="pill" data-category="donas">Donas</button>
+                <button class="pill" data-category="postres">Postres</button>
+            </div>
+
+            <!--- SECCION DE RECETAS --->
+            <div class="recipes-grid" id="recipesGrid">
+
+                <!-- Tarjeta 1 -->
+                <article class="recipe-card" data-category="postres">
+                    <div class="recipe-card-img">
+                        <img src="../Imagenes/postre-de-fresa-1.webp" alt="Imagen de postre">
+                        <span class="recipe-tag">Sin horno</span>
+                    </div>
+                    <div class="recipe-info">
+                        <div class="recipe-meta">
+                            <span>⏱ 20 min</span>
+                            <span>⭐ Fácil</span>
+                        </div>
+                        <h3>Postre de fresa</h3>
+                        <p>Delicioso postre cremoso de fresas con capas de bizcocho suave y crema batida.</p>
+                        <a href="../pages/Postre-fresa.html" class="recipe-btn">Ver receta &rarr;</a>
+                    </div>
+                </article>
+
+                <!-- Tarjeta 2 -->
+                 <article class="recipe-card" data-category="postres">
+                    <div class="recipe-card-img">
+                        <img src="../Imagenes/tostada de fresa.png" alt="Imagen de postre">
+                        <span class="recipe-tag">Sin horno</span>
+                    </div>
+                    <div class="recipe-info">
+                        <div class="recipe-meta">
+                            <span>⏱ 20 min</span>
+                            <span>⭐ Fácil</span>
+                        </div>
+                        <h3>Tostadas de fresa</h3>
+                        <p>Tostadas francesas rellenas de crema y fresas frescas bañadas en miel.</p>
+                        <a href="../pages/Tostadas-de-fresa.html" class="recipe-btn">Ver receta &rarr;</a>
+                    </div>
+                </article>
+
+                <!-- Tarjeta 3 -->
+                 <article class="recipe-card" data-category="postres">
+                    <div class="recipe-card-img">
+                        <img src="../Imagenes/Red Velvet con Fresas.jpe" alt="Imagen de postre">
+                        <span class="recipe-tag">Sin horno</span>
+                    </div>
+                    <div class="recipe-info">
+                        <div class="recipe-meta">
+                            <span>⏱ 40 min</span>
+                            <span>⭐ Fácil</span>
+                        </div>
+                        <h3>Red Velvet con fresas</h3>
+                        <p>Bizcocho red velvet con capas de crema de queso y fresas frescas.</p>
+                        <a href="../pages/Red-Velvet-con-fresas.html" class="recipe-btn">Ver receta &rarr;</a>
+                    </div>
+                </article>
+
+                  <!-- Tarjeta 4 -->
+                   <article class="recipe-card" data-category="postres">
+                    <div class="recipe-card-img">
+                        <img src="../Imagenes/Pay de fresa con chocolate.webp" alt="Pay de fresa con chocolate">
+                        <span class="recipe-tag">Sin horno</span>
+                    </div>
+                    <div class="recipe-info">
+                        <h3>Pay de fresa con chocolate</h3>
+                        <p>Es un postre frío que combina una base crujiente, un relleno cremoso de chocolate y fresas frescas.</p>
+                        <a href="../pages/Pay-de-fresa-con-chocolate.html" class="recipe-btn">Ver receta &rarr;</a>
+                    </div>
+                   </article>
+
+            </div>
+
+            <p class="no-results" id="noResultsMsg">No encontramos recetas con ese nombre o categoría. Intenta con otra búsqueda.</p>
+
+        </div>
+
+    </section>
+
+    <div class="contain-more-recipes">
+            <p class="text-more-recipes">°° Próximamente más recetas °°</p>
+    </div>
+
+
+     <!-- footer -->
+
+    <!-- OLA DECORATIVA -->
+        <div class="footer-wave">
+            <svg viewBox="0 0 1440 100" preserveAspectRatio="none">
+            <path fill="#2B2320" d="M0,60 C90,20 150,20 240,60 C330,100 390,100 480,60 C570,20 630,20 720,60 C810,100 870,100 960,60 C1050,20 1110,20 1200,60 C1290,110 1350,110 1440,60 L1440,120 L0,120 Z"></path>
+            </svg>
+        </div>
+
+    <footer class="footer-set">
+        <div class="footer-content">
+
+            <!-- Columna izquierda: subscribe -->
+            <div class="set-subscribe">
+                <div class="text-subscribe-set">
+                    <h2>¡No te pierdas ninguna receta nueva! </h2>
+                    <p>Suscríbete y recibe en tu correo cada receta nueva que publiquemos. Postres fáciles, cremosos y sin complicaciones directo a tu bandeja.</p>
+                </div>
+
+                <!-- Columna derecha: subscribe -->
+                <form class="subscribe-form" id="subscribeForm">
+                    <div class="form-group">
+
+                        <div class="email">
+                           <label for="email">Manténgase al día</label>
+                           <input type="email" name="email" id="email" placeholder="Ingresa tu correo" required>
+                        </div>
+                        <button class="btn-send" id="btnEnviar" type="submit">Suscribete</button>
+
+                        <p class="subscribe-success" id="successMsg">
+                            ✅ ¡Listo! Te avisaremos con cada nueva receta.
+                        </p>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Footer -->
+            <div class="footer-bottom">
+
+                 <!-- Columna marca -->
+                  <div class="footer-brand">
+                    <a href="index.html" class="footer-logo">
+                        <img src="../Imagenes/logo.png" width="40" height="40" alt="Logo">
+                        <span class="footer-logo-text">Repostería <span>Online</span></span>
+                    </a>
+                    <p>Recetas de postres fáciles, cremosos y deliciosos para preparar en casa. Sin horno y sin complicaciones.</p>
+                    <div class="footer-socials">
+
+                        <!-- Facebook -->
+                         <a href="https://www.facebook.com/profile.php?id=61555227377096" class="social-btn" target="_blank" aria-label="Facebook">
+                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                         </a>
+
+                         <!-- Instagram -->
+                         <a href="#" class="social-btn" aria-label="Instagram">
+                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849
+                                0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014
+                                4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0
+                                2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                         </a>
+                    </div>
+                  </div>
+
+                  <!-- Columna recetas -->
+                   <div class="footer-col">
+                    <h4>Recetas</h4>
+                    <ul>
+                        <li><a href="#">Pay de limon</a></li>
+                        <li><a href="#">Tiramisu de fresa</a></li>
+                        <li><a href="#">Crepes de fresa</a></li>
+                        <li><a href="#">Torta tres leches</a></li>
+                        <li><a href="#">Ver todas</a></li>
+                    </ul>
+                   </div>
+
+                   <!-- Columna navegacion -->
+                   <div class="footer-col">
+                    <h4>Navegar</h4>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="../Tips/tips.html">Tips</a></li>
+                        <li><a href="../curso/curso.html">Curso</a></li>
+                        <li><a href="../about/about.html">Sobre nosotros</a></li>
+                        <li><a href="https://www.facebook.com/profile.php?id=61555227377096" target="_blank">Facebook</a></li>
+                    </ul>
+                   </div>
+            </div>
+        </div>
+
+        <!-- Columna navegacion -->
+         <div class="footer-copyright">
+            © 2025 <span>Reposteria Online</span>. Todos los derechos reservados. Hecho con amor.
+         </div>
+    </footer>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var searchInput = document.getElementById('recipeSearchInput');
+        var searchButton = document.getElementById('recipeSearchBtn');
+        var filterButtons = document.querySelectorAll('.filter-pills .pill');
+        var recipeCards = document.querySelectorAll('#recipesGrid .recipe-card');
+        var noResultsMsg = document.getElementById('noResultsMsg');
+
+        var activeCategory = 'todos';
+
+        function applyFilters() {
+            var searchTerm = searchInput.value.trim().toLowerCase();
+            var visibleCount = 0;
+
+            recipeCards.forEach(function (card) {
+                var cardCategory = (card.dataset.category || '').toLowerCase();
+                var titleEl = card.querySelector('h3');
+                var cardTitle = titleEl ? titleEl.textContent.toLowerCase() : '';
+
+                var matchesCategory = activeCategory === 'todos' || cardCategory === activeCategory;
+                var matchesSearch = cardTitle.indexOf(searchTerm) !== -1;
+
+                if (matchesCategory && matchesSearch) {
+                    card.style.display = '';
+                    visibleCount++;
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+
+            noResultsMsg.style.display = visibleCount === 0 ? 'block' : 'none';
+        }
+
+        filterButtons.forEach(function (button) {
+            button.addEventListener('click', function () {
+                filterButtons.forEach(function (btn) { btn.classList.remove('active'); });
+                button.classList.add('active');
+                activeCategory = (button.dataset.category || 'todos').toLowerCase();
+                applyFilters();
+            });
+        });
+
+        searchInput.addEventListener('input', applyFilters);
+
+        searchButton.addEventListener('click', function (e) {
+            e.preventDefault();
+            applyFilters();
+        });
+
+        searchInput.addEventListener('keydown', function (e) {
+            if (e.key === 'Enter') {
+                e.preventDefault();
+                applyFilters();
+            }
+        });
+    });
+
+    // Lógica de suscripción
+        const form = document.getElementById('subscribeForm');
+        const successMsg = document.getElementById('successMsg');
+        const btn = document.getElementById('btnEnviar');
+
+        form.addEventListener('submit', function(e) {
+            e.preventDefault(); // Evita que recargue la página
+
+            const emailInput = document.getElementById('email');
+            const email = emailInput.value.trim();
+
+            if (!email) return;
+
+            // Simulación de envío (aquí conectarías tu servicio real)
+            btn.textContent = 'Enviando...';
+            btn.disabled = true;
+
+            setTimeout(() => {
+                emailInput.value = '';
+                btn.textContent = '¡Suscrito! ✅';
+                successMsg.style.display = 'block';
+
+                // Restaurar botón después de 4 segundos
+                setTimeout(() => {
+                    btn.textContent = 'Suscribirme 🎉';
+                    btn.disabled = false;
+                    successMsg.style.display = 'none';
+                }, 4000);
+            }, 1200);
+        });
+    </script>
+
+</body>
+</html>
