@@ -1,0 +1,962 @@
+@import url('https://googleapis.com');
+@import url('https://fonts.googleapis.com/css2?family=Sansita:ital,wght@0,400;0,700;0,800;0,900;1,400;1,700;1,800;1,900&display=swap');
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    max-width: 100%;
+    background: #ffffff;
+    overflow-x: hidden;
+}
+
+.navbar-set {
+    background-color: #FC4444;
+    max-width: 100%;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 100px;
+    position: relative;
+    margin: 0 auto;
+    max-width: 1500px;
+    border-bottom: 1px solid #F9F2F2;
+}
+
+.logo {
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.1);
+}
+
+.nav-links {
+    display: flex;
+    gap: 50px;
+    list-style: none;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 14px;
+    position: relative;
+    transition: color 0.3s ease;
+    font-weight: 200;
+    font-family: "Roboto", sans-serif
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 0%;
+    height: 2px;
+    background: #F9F2F2;
+    transition: width 0.3s ease;
+  }
+
+  .nav-links a:hover {
+    color: #ece0e3;
+  }
+
+  .nav-links a:hover::after {
+    width: 100%;
+  }
+
+  .button-nav {
+    padding: 12px 20px;
+    font-size: 15px;
+    font-weight: 700;
+    color: #FC4444;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background-color: #ffffff;
+  }
+  
+  .button-nav:hover {
+    transform: scale(1.1);
+  }
+
+  /* --- Seccion de Hero --- */
+
+  .hero {
+    max-width: 100%;
+    background: #FC4444; /* color de fondo */
+  }
+
+  .hero-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px; /* Espacio entre contenido */
+    padding: 100px 100px;
+    overflow: hidden;
+    flex-wrap: wrap;
+    max-width: 1500px; /* Tamaño maximo de ancho del contenido */
+    margin: 0 auto; /* Centra el contenido en pantallas gigantes */
+  }
+
+  .hero-text {
+    position: relative;
+    max-width: 600px;
+  }
+
+  .eyebrow {
+    display: inline-block;
+    font-family: "Sansita", sans-serif;
+    font-style: italic;
+    font-weight: 700;
+    color: #f1f1f1;
+    margin-bottom: 12px;
+    font-size: 15px;
+  }
+  
+  h1 {
+    font-size: 60px;
+    position: relative;
+    color: #ffffff;
+    font-family: "Sansita", sans-serif;
+    margin-bottom: 10px;
+    line-height: 1.1;
+  }
+
+  .hero-text p {
+    color: #f3eeee;
+    font-family: "Nunito Sans", sans-serif;
+    font-size: 16px;
+  }
+
+  .hero-image {
+    position: relative;
+    width: 600px;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .image-hero {
+    position: relative;
+    display: flex;
+    height: 400px;
+    width: 550px;
+    z-index: 1;  
+  }
+
+  .image-hero img {
+    height: 100%;
+    width: auto;
+    object-fit: contain; 
+    border-radius: 20px; 
+    transition: all 0.3s ease;
+  }
+
+  .image-hero img:hover {
+    transform: scale(1.03);
+  }
+
+  .section-card {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 100px;
+  }
+
+  .target-wave {
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    position: relative;
+    background-color: #FC4444;
+    margin-top: -1px;
+  }
+
+  .target-wave svg {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 90px;
+  }
+
+  .set-card-features {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 0 20px;
+  }
+
+
+  .features-card {
+    position: relative;
+    background: #FEF5EA;
+    width: 100%;
+    max-width: 750px;
+    border-radius: 20px;
+    padding: 30px 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    text-align: center;
+    line-height: 25px;
+    box-shadow: 0 12px 28px rgb(0, 0, 0, 0.18);
+    margin-top: -90px; /* Se posiciona sobre la onda */
+  }
+
+  .features-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .features-item p {
+    font-family: "Nunito", sans-serif;
+    font-size: 14px;
+  }
+
+  /* seccion de titulo receta */
+  .text-tittle {
+    display: flex;
+    max-width: 100%;
+    margin-bottom: 70px;
+    justify-content: center;
+  }
+
+  .text-recipe {
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .text-recipe h2{
+    font-size: 40px;
+    font-family: "Sansita", sans-serif;
+    margin-bottom: 10px;
+    color: #FC4444;
+  }
+
+  .text-recipe p {
+    font-family: "Nunito Sans", sans-serif;
+    font-size: 15px;
+  }
+
+  /* --- seccion de los ingredientes y la preparacion --- */
+  .recipe-section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 0 20px 60px;
+  }
+
+  .recipe-content {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 50px;
+  }
+
+  /* Caja de ingredientes */
+  .ingredients-item {
+    position: relative;
+    flex: 1 1 360px;
+    max-width: 420px;
+    background: #FEF5EA;
+    border-radius: 24px;
+    padding: 32px 28px;
+    box-shadow: 0 16px 32px rgba(252, 68, 68, 0.103);
+    overflow: hidden;
+    transition: all 0.3s ease;
+  }
+
+  .ingredients-item:hover {
+    transform: scale(1.02);
+    box-shadow: 0 16px 32px rgba(156, 56, 56, 0.199);
+  }
+
+  /* Mancha decorativa detrás de la tarjeta, guiño a la fruta */
+  .ingredients-item::before {
+    content: "";
+    position: absolute;
+    top: -60px;
+    right: -60px;
+    width: 140px;
+    height: 140px;
+    background: #ffd044;
+    opacity: 0.25;
+    border-radius: 50%;
+  }
+
+  .ingredients-eyebrow {
+    position: relative;
+    display: inline-block;
+    background: #FC4444;
+    color: #ffffff;
+    font-family: "Nunito Sans", sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    padding: 5px 14px;
+    border-radius: 30px;
+    margin-bottom: 14px;
+  }
+
+  .ingredients-item h3 {
+    position: relative;
+    margin-bottom: 20px;
+    font-family: "Sansita", sans-serif;
+    font-size: 26px;
+    color: #2B2320;
+  }
+
+  .ingredients-item ul {
+    position: relative;
+    list-style: none;
+    padding: 0;
+  }
+
+  .ingredients-item li {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    padding: 12px 0;
+    border-bottom: 1px dashed rgba(43, 35, 32, 0.15);
+    font-family: "Nunito Sans", sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #333333;
+  }
+
+  .ingredients-item li:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+
+  .ing-icon {
+    flex-shrink: 0;
+    width: 38px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    background: #ffffff;
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  }
+
+  /* --- Columna de preparación --- */
+  .columna-preparacion {
+    flex: 1 1 420px;
+  }
+
+  .columna-preparacion h2 {
+    padding-top: 0;
+    margin-bottom: 24px;
+    font-size: 32px;
+    color: #FC4444;
+    font-family: "Sansita", sans-serif;
+  }
+
+  /* Esto alinea el número y el texto en la misma fila */
+  .paso-preparacion {
+    display: flex;
+    align-items: flex-start;
+    font-family: "Nunito Sans", sans-serif;
+  }
+
+  /* Columna que agrupa el número circular y la línea que lo conecta al siguiente paso */
+  .numero-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 22px;
+    flex-shrink: 0;
+  }
+
+  /* El círculo rojo con el número */
+  .numero-pildora {
+    background-color: #FC4444;
+    color: #ffffff;
+    font-size: 20px;
+    font-family: "Sansita", sans-serif;
+    font-weight: bold;
+    width: 48px;
+    height: 48px;
+    min-height: 48px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 6px 14px rgba(252, 68, 68, 0.35);
+  }
+
+  /* Línea punteada que conecta un paso con el siguiente, como capas apilándose */
+  .linea-conectora {
+    width: 3px;
+    flex-grow: 1;
+    min-height: 36px;
+    margin-top: 6px;
+    background-image: repeating-linear-gradient(to bottom, #ffd044 0, #ffd044 6px, transparent 6px, transparent 12px);
+  }
+
+  /* Bloque contenedor del texto a la derecha */
+  .contenido-paso {
+    flex: 1;
+    padding-bottom: 32px;
+  }
+
+  .contenido-paso h3 {
+    margin: 4px 0 8px 0;
+    font-family: "Sansita", sans-serif;
+    font-size: 19px;
+    color: #2B2320;
+    letter-spacing: 0.3px;
+  }
+
+  .opcional-tag {
+    display: inline-block;
+    vertical-align: middle;
+    background: #ffd044;
+    color: #2B2320;
+    font-family: "Nunito Sans", sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 3px 10px;
+    border-radius: 30px;
+    margin-left: 8px;
+  }
+
+  .contenido-paso p {
+    margin: 0;
+    font-size: 14.5px;
+    line-height: 1.6;
+    color: #4a4a4a;
+  }
+
+  @media (max-width: 640px) {
+    .ingredients-item,
+    .columna-preparacion {
+      flex-basis: 100%;
+    }
+
+    .contenido-paso {
+      padding-bottom: 24px;
+    }
+  }
+
+  /*--- Seccion de mas recetas ---*/
+  .more-recipes-set {
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    margin-bottom: 50px;
+    width: 100%;
+  }
+
+  .more-recipes {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 60px auto;
+    flex-direction: column;
+    justify-items: center;
+  }
+
+  .more-recipes-tittle {
+    display: flex;
+    justify-content: center;
+  }
+
+  .more-recipes-tittle h2 {
+    font-size: 40px;
+    font-family: "Sansita", sans-serif;
+    margin-bottom: 10px;
+    color: #FC4444;
+    width: 600px;
+    text-align: center;
+  }
+
+  .recipes-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 40px;
+  }
+
+  /*--- Targeta de receta ---*/
+  .recipe-card {
+    background-color: #ffffff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgba(252, 68, 68, 0.10);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .recipe-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 36px rgba(252, 68, 68, 0.18);
+  }
+
+  /* Contenedor de imagen con posición relativa para el tag */
+  .recipe-card-img {
+    position: relative;
+    width: 100%;
+    height: 210px;
+    overflow: hidden;
+    background: #FEF5EA;
+  }
+
+  .recipe-card-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+  }
+  
+  .recipe-card:hover .recipe-card-img img {
+    transform: scale(1.05);
+  }
+
+  /* Tag flotante sobre la imagen */
+  .recipe-tag {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    background: #FC4444;
+    color: #ffffff;
+    font-family: "Nunito Sans", sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 4px 12px;
+    border-radius: 30px;
+  }
+
+  /* Contenido de la tarjeta */
+  .recipe-info {
+    padding: 20px 22px 24px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
+
+  /* Tiempo y dificultad */
+  .recipe-meta {
+    font-family: "Nunito Sans", sans-serif;
+    font-size: 12px;
+    color: #999999;
+  }
+
+  .recipe-info h3 {
+    font-family: "Sansita", sans-serif;
+    font-size: 20px;
+    color: #2B2320;
+    margin-bottom: 8px;
+  }
+
+  .recipe-info p {
+    font-family: "Nunito Sans", sans-serif;
+    font-size: 13.5px;
+    color: #666666;
+    line-height: 1.55;
+    flex: 1;
+    margin-bottom: 18px;
+  }
+
+  .recipe-btn {
+    display: inline-block;
+    align-self: flex-start;
+    background: #FC4444;
+    color: #ffffff;
+    font-family: "Nunito Sans", sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    text-decoration: none;
+    padding: 9px 20px;
+    border-radius: 30px;
+    transition: background 0.3s ease, transform 0.2s ease;
+  }
+
+  .recipe-btn:hover {
+    background: #d93232;
+    transform: scale(1.04);
+  }
+
+   /* --- Botón CTA "Ver todas las recetas" --- */
+   .more-recipes-cta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+    margin-top: 50px;
+    padding-top: 40px;
+    border-top: 1px dashed rgba(252, 68, 68, 0.25);
+   }
+
+   .more-recipes-cta p {
+    font-family: "Nunito Sans", sans-serif;
+    font-size: 15px;
+    color: #888888;
+   }
+
+   .btn-todas-recetas {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: #FC4444;
+    color: #ffffff;
+    font-family: "Sansita", sans-serif;
+    font-size: 17px;
+    font-weight: 700;
+    text-decoration: none;
+    padding: 14px 36px;
+    border-radius: 50px;
+    box-shadow: 0 8px 20px rgba(252, 68, 68, 0.30);
+    transition: all 0.3s ease;
+  }
+
+  .btn-todas-recetas:hover {
+    background: #d93232;
+    transform: translateY(-3px);
+    box-shadow: 0 12px 28px rgba(252, 68, 68, 0.40);
+  }
+
+  .btn-todas-recetas svg {
+    transition: transform 0.3s ease;
+  }
+
+  .btn-todas-recetas:hover svg {
+    transform: translateX(4px);
+  }
+
+  /* --- Responsive tarjetas --- */
+  @media (max-width: 900px) {
+    .recipes-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 580px) {
+    .recipes-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .more-recipes-tittle h2 {
+      font-size: 28px;
+      width: 100%;
+    }
+  }
+
+  /*---- FOOTER SECTION ----*/
+
+  .footer-wave {
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    position: relative;
+    background-color: #ffffffff;
+    margin-top: -1px;
+  }
+
+  .footer-wave svg {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 90px;
+  }
+
+  .footer-set {
+    width: 100%;
+    background: #2B2320;
+    padding: 60px 20px 0;
+  }
+ 
+  .footer-content {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+  }
+ 
+  .set-subscribe {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    background: linear-gradient(135deg, #FC4444 0%, #d93232 100%);
+    border-radius: 24px;
+    padding: 50px 60px;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+  }
+ 
+  .set-subscribe::before {
+    content: "";
+    position: absolute;
+    top: -60px; right: -60px;
+    width: 220px; height: 220px;
+    background: rgba(255,255,255,0.08);
+    border-radius: 50%;
+  }
+ 
+  .set-subscribe::after {
+    content: "";
+    position: absolute;
+    bottom: -80px; right: 120px;
+    width: 180px; height: 180px;
+    background: rgba(255,255,255,0.05);
+    border-radius: 50%;
+  }
+ 
+  .text-subscribe-set {
+    flex: 1;
+    position: relative;
+    z-index: 1;
+  }
+ 
+  .text-subscribe-set h2 {
+    font-size: 28px;
+    font-family: "Sansita", sans-serif;
+    color: #ffffff;
+    margin-bottom: 10px;
+    line-height: 1.25;
+  }
+ 
+  .text-subscribe-set p {
+    font-size: 14px;
+    font-family: "Nunito Sans", sans-serif;
+    color: rgba(255,255,255,0.80);
+    line-height: 1.6;
+  }
+ 
+  .subscribe-form {
+    flex-shrink: 0;
+    position: relative;
+    z-index: 1;
+  }
+ 
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+ 
+  .email {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+ 
+  .email label {
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    font-family: "Nunito Sans", sans-serif;
+    color: rgba(255,255,255,0.75);
+  }
+ 
+  .email input {
+    border-radius: 50px;
+    border: 2px solid rgba(255,255,255,0.25);
+    padding: 12px 22px;
+    font-size: 14px;
+    font-family: "Nunito Sans", sans-serif;
+    background: rgba(255,255,255,0.15);
+    color: #ffffff;
+    width: 280px;
+    outline: none;
+    transition: border 0.3s ease, background 0.3s ease;
+  }
+ 
+  .email input::placeholder { color: rgba(255,255,255,0.55); }
+ 
+  .email input:focus {
+    border-color: rgba(255,255,255,0.70);
+    background: rgba(255,255,255,0.22);
+  }
+ 
+  .btn-send {
+    padding: 12px 28px;
+    border-radius: 50px;
+    border: none;
+    background: #ffffff;
+    color: #FC4444;
+    font-size: 15px;
+    font-weight: 700;
+    font-family: "Sansita", sans-serif;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+  }
+ 
+  .btn-send:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 22px rgba(0,0,0,0.20);
+  }
+ 
+  .subscribe-success {
+    display: none;
+    font-family: "Nunito Sans", sans-serif;
+    font-size: 13px;
+    color: rgba(255,255,255,0.85);
+    text-align: center;
+    padding-top: 6px;
+  }
+ 
+  /* ============================
+     FOOTER — Pie de página
+     ============================ */
+ 
+  .footer-bottom {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr;
+    gap: 50px;
+    padding: 50px 0;
+    border-top: 1px solid rgba(255,255,255,0.08);
+  }
+ 
+  .footer-brand p {
+    font-family: "Nunito Sans", sans-serif;
+    font-size: 13.5px;
+    color: rgba(255,255,255,0.55);
+    line-height: 1.7;
+    margin-top: 14px;
+    max-width: 280px;
+  }
+ 
+  .footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+  }
+ 
+  .footer-logo-text {
+    font-family: "Sansita", sans-serif;
+    font-size: 22px;
+    color: #ffffff;
+  }
+ 
+  .footer-logo-text span { color: #ffd044; }
+ 
+  .footer-socials {
+    display: flex;
+    gap: 10px;
+    margin-top: 22px;
+  }
+ 
+  .social-btn {
+    width: 36px; height: 36px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.08);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: background 0.3s ease, transform 0.2s ease;
+  }
+ 
+  .social-btn:hover {
+    background: #FC4444;
+    transform: translateY(-3px);
+  }
+ 
+  .social-btn svg { width: 16px; height: 16px; fill: #ffffff; }
+ 
+  .footer-col h4 {
+    font-family: "Sansita", sans-serif;
+    font-size: 16px;
+    color: #ffffff;
+    margin-bottom: 18px;
+    position: relative;
+    padding-bottom: 10px;
+  }
+ 
+  .footer-col h4::after {
+    content: "";
+    position: absolute;
+    bottom: 0; left: 0;
+    width: 28px; height: 2px;
+    background: #FC4444;
+    border-radius: 2px;
+  }
+ 
+  .footer-col ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+ 
+  .footer-col ul li a {
+    text-decoration: none;
+    font-family: "Nunito Sans", sans-serif;
+    font-size: 13.5px;
+    color: rgba(255,255,255,0.55);
+    transition: color 0.3s ease;
+  }
+ 
+  .footer-col ul li a:hover { color: #ffd044; }
+ 
+  .footer-copyright {
+    text-align: center;
+    padding: 20px;
+    border-top: 1px solid rgba(255,255,255,0.06);
+    font-family: "Nunito Sans", sans-serif;
+    font-size: 12.5px;
+    color: rgba(255,255,255,0.30);
+  }
+ 
+  .footer-copyright span { color: #FC4444; }
+ 
+  @media (max-width: 860px) {
+    .set-subscribe {
+      flex-direction: column;
+      padding: 40px 30px;
+      gap: 30px;
+      text-align: center;
+    }
+    .email input { width: 100%; }
+    .footer-bottom { grid-template-columns: 1fr 1fr; }
+    .footer-brand { grid-column: 1 / -1; }
+  }
+ 
+  @media (max-width: 520px) {
+    .footer-bottom { grid-template-columns: 1fr; }
+  }
+
