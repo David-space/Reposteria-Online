@@ -805,6 +805,20 @@ body {
  
   @media (max-width: 860px) {
 
+    .hero-container {
+      padding: 40px 30px;
+    }
+
+    .blob {
+      width: 80%;
+      height: 80%;
+    }
+
+    .img-hero {
+      width: 400px;
+      height: 470px;
+    }
+
     .recipes-grid {
       grid-template-columns: repeat(1, 1fr);
     }
