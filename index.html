@@ -21,7 +21,7 @@
                 <li><a href="curso/curso.html">Curso</a></li>
                 <li><a href="about/about.html">Sobre nosotros</a></li>
             </div>
-            <div class="button">
+            <div class="button" id="navButton">
                 <a href="https://www.facebook.com/profile.php?id=61555227377096" target="_blank">
                     <button class="button-nav">¡VISITANOS!</button>
                 </a>
@@ -305,6 +305,33 @@
     </footer>
 
     <script>
+
+            // Menú hamburguesa para móvil
+    const menuToggle = document.getElementById('menuToggle');
+    const navLinks = document.getElementById('navLinks');
+    const button = document.getElementById('navButton')
+    const navOverlay = document.getElementById('navOverlay');
+
+    function cerrarMenu() {
+      menuToggle.classList.remove('active');
+      navLinks.classList.remove('active');
+      button.classList.remove('active')
+      navOverlay.classList.remove('active');
+    }
+
+    menuToggle.addEventListener('click', () => {
+      menuToggle.classList.toggle('active');
+      navLinks.classList.toggle('active');
+      button.classList.toggle('active');
+      navOverlay.classList.toggle('active');
+    });
+
+    navOverlay.addEventListener('click', cerrarMenu);
+
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', cerrarMenu);
+    });
+
     document.addEventListener('DOMContentLoaded', function () {
         var searchInput = document.getElementById('recipeSearchInput');
         var searchButton = document.getElementById('recipeSearchBtn');
