@@ -804,6 +804,11 @@ body {
   .footer-copyright span { color: #FC4444; }
  
   @media (max-width: 860px) {
+
+    .recipes-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
     .set-subscribe {
       flex-direction: column;
       padding: 40px 30px;
