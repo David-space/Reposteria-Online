@@ -318,7 +318,9 @@ body {
   }
 
   .text-recipe {
-    width: 500px;
+    width: 100%;
+    max-width: 500px;
+    padding: 0 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
