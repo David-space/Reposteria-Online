@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style-page.css">
-    <title>Red Velvet con fresas</title>
+    <title>Donas de Fresas</title>
     <link rel="icon" type="image/png" href="../Imagenes/logo.png">
 </head>
 <body>
@@ -12,35 +12,44 @@
     <nav class="navbar-set">
         <div class="navbar">
             <div class="logo">
-                <a href="Reposteria-Online\index.html">
-                    <img src="Reposteria-Online\Imagenes\logo.png" width="55px" height="55px" alt="Logo">
+                <a href="..\index.html">
+                    <img src="..\Imagenes\logo.png" width="55px" height="55px" alt="Logo">
                 </a>
             </div>
+
+            <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">
+               <span></span>
+               <span></span>
+               <span></span>
+            </button>
+
             <div class="nav-links" id="navLinks">
                 <li><a href="../index.html">Inicio</a></li>
                 <li><a href="../Tips/tips.html">Tips</a></li>
                 <li><a href="../curso/curso.html">Curso</a></li>
                 <li><a href="../about/about.html">Sobre nosotros</a></li>
             </div>
-            <div class="button">
+            <div class="button" id="navButton">
                 <a href="https://www.facebook.com/profile.php?id=61555227377096">
                     <button class="button-nav">¡VISITANOS!</button>
                 </a>
             </div>
+
+            <div class="nav-overlay" id="navOverlay"></div>
         </div>
     </nav>
 
     <section class="hero">
         <div class="hero-container">
             <div class="hero-text">
-                <span class="eyebrow">Receta &middot; Red Velvet con fresas</span>
-                <h1>Red Velvet con fresas</h1>
-                <p>Esta tarta Red Velvet con fresas combina la suavidad de un bizcocho aterciopelado con la frescura de las fresas naturales y un cremoso frosting de queso.</p>
+                <span class="eyebrow">Receta &middot; de postre de fresa</span>
+                <h1>Donas con Glaseado de Queso y Fresas</h1>
+                <p>Esponjosas donas doradas cubiertas con una cremosa capa de glaseado blanco, trocitos de fruta y fresas frescas espolvoreadas con azúcar.</p>
             </div>
 
             <div class="hero-image">
                 <div class="image-hero">
-                    <img src="../Imagenes/Red-Velvet-con-Fresas.webp" alt="Red Velvet con fresas">
+                    <img src="../Imagenes/" alt="Postre de fresa">
                 </div>
             </div>
         </div>
@@ -64,7 +73,7 @@
                             <path d="M 25 2 C 12.309295 2 2 12.309295 2 25 C 2 37.690705 12.309295 48 25 48 C 37.690705 48 48 37.690705 48 25 C 48 12.309295 37.690705 2 25 2 z M 25 4 C 36.609824 4 46 13.390176 46 25 C 46 36.609824 36.609824 46 25 46 C 13.390176 46 4 36.609824 4 25 C 4 13.390176 13.390176 4 25 4 z M 24.984375 6.9863281 A 1.0001 1.0001 0 0 0 24 8 L 24 22.173828 A 3 3 0 0 0 22 25 A 3 3 0 0 0 22.294922 26.291016 L 16.292969 32.292969 A 1.0001 1.0001 0 1 0 17.707031 33.707031 L 23.708984 27.705078 A 3 3 0 0 0 25 28 A 3 3 0 0 0 28 25 A 3 3 0 0 0 26 22.175781 L 26 8 A 1.0001 1.0001 0 0 0 24.984375 6.9863281 z"></path>
                         </svg>  
                     </div>
-                    <p>40 minutos</p>
+                    <p>15 minutos</p>
                 </div>
 
                 <div class="features-item">
@@ -108,28 +117,24 @@
                 <h3>Ingredientes</h3>
                 <ul>
                     <li>
-                        <span class="ing-icon" aria-hidden="true">🍰</span>
-                        <span><strong>1 disco o plancha de bizcocho Red Velvet</strong> (prehecho o elaborado con mezcla lista en sartén/microondas).</span>
-                    </li>
-                    <li>
                         <span class="ing-icon" aria-hidden="true">🍓</span>
-                        <span><strong>250 g de fresas frescas</strong> (lavadas, desinfectadas y cortadas en láminas finas).</span>
+                        <span><strong>500g de fresas frescas</strong> (lavadas, desinfectadas y picadas en rodajas).</span>
                     </li>
                     <li>
-                        <span class="ing-icon" aria-hidden="true">🧀</span>
-                        <span><strong>200 g de queso crema estilo Philadelphia</strong> (a temperatura ambiente).</span>
+                        <span class="ing-icon" aria-hidden="true">🥫</span>
+                        <span><strong>1 lata (400g) de leche condensada</strong> (aporta el dulzor perfecto).</span>
                     </li>
                     <li>
-                        <span class="ing-icon" aria-hidden="true">🥛</span>
-                        <span><strong>200 ml de crema de leche o nata para montar</strong> (bien fría).</span>
+                        <span class="ing-icon" aria-hidden="true">🍦</span>
+                        <span><strong>1 lata (400g) de crema de leche</strong> o nata para montar (bien fría).</span>
                     </li>
                     <li>
-                        <span class="ing-icon" aria-hidden="true">🍬</span>
-                        <span><strong>80 g de azúcar glass</strong> (o azúcar impalpable).</span>
+                        <span class="ing-icon" aria-hidden="true">🍪</span>
+                        <span><strong>1 paquete (200g) de galletas dulces</strong> (tipo María o galletas de vainilla).</span>
                     </li>
                     <li>
-                        <span class="ing-icon" aria-hidden="true">🌿</span>
-                        <span><strong>1 cucharadita de esencia de vainilla.</strong></span>
+                        <span class="ing-icon" aria-hidden="true">🍮</span>
+                        <span><strong>1 sobre (10 g) de gelatina sin sabor</strong> (opcional, si deseas más firmeza de molde).</span>
                     </li>
                 </ul>
 
@@ -146,8 +151,8 @@
                     </div>
 
                     <div class="contenido-paso">
-                        <h3>Preparar el frosting suave de queso</h3>
-                        <p>En un tazón, bate el queso crema con el azúcar glass y la esencia de vainilla hasta obtener una consistencia cremosa. En otro recipiente frío, bate la crema de leche a punto de nieve e incorpórala al queso con movimientos envolventes.</p>
+                        <h3>Preparar la crema base</h3>
+                        <p>En la licuadora mezcla la leche condensada, la crema de leche y la esencia de vainilla hasta obtener una consistencia homogénea y ligeramente espesa.</p>
                     </div>
                 </div>
 
@@ -159,8 +164,8 @@
                     </div>
 
                     <div class="contenido-paso">
-                        <h3>Picar las fresas</h3>
-                        <p>Corta la mayor parte de las fresas en cubos pequeños o láminas delgadas para intercalar en los rellenos. Reserva unas cuantas fresas enteras o cortadas por la mitad para la decoración superior.</p>
+                        <h3>Disolver la gelatina <span class="opcional-tag">opcional</span></h3>
+                        <p>Si deseas que quede con consistencia de molde, disuelve la gelatina sin sabor en 4 cucharadas de agua tibia e incorpórala a la mezcla anterior mientras sigues batiendo.</p>
                     </div>
                  </div>
 
@@ -172,8 +177,8 @@
                     </div>
 
                     <div class="contenido-paso">
-                        <h3>Montar las capas</h3>
-                        <p>Corta el bizcocho Red Velvet en rectángulos o capas finas. Coloca una primera base de bizcocho en tu molde o plato, distribuye una capa generosa de cream cheese y añade una capa abundante de fresas picadas. Repite el proceso hasta formar 3 niveles.</p>
+                        <h3>Armar las capas del postre</h3>
+                        <p>En una refractaria grande o molde desmontable, coloca una primera capa de galletas o bizcocho suave. Cubre con una capa generosa de crema de fresa y distribuye trozos de fresa fresca. Repite el proceso alternando galleta, crema y fruta hasta llenar el molde (de 3 a 4 niveles).</p>
                     </div>
                 </div>
 
@@ -185,7 +190,7 @@
 
                     <div class="contenido-paso">
                         <h3>Decorar y refrigerar</h3>
-                        <p>Cubre la parte superior con rosetones de la misma crema usando una manga pastelera y decora con las fresas reservadas. Refrigera durante al menos 30 minutos antes de servir para que adquiera firmeza.</p>
+                        <p>Termina con una capa superior de crema blanca o mousse rosa, decora con rosetones de crema chantilly y fresas enteras en la parte superior. Refrigera por al menos 3 a 4 horas antes de desmoldar y servir.</p>
                     </div>
                  </div>
             </div>
@@ -206,7 +211,7 @@
 
                 <article class="recipe-card">
                     <div class="recipe-card-img">
-                        <img src="Reposteria-Online\Imagenes\Pay-de-limon.webp" alt="Pay-de-limon">
+                        <img src="../Imagenes/Pay-de-limon.webp" alt="Pay-de-limon">
                         <span class="recipe-tag">Sin horno</span>
                     </div>
                     <div class="recipe-info">
@@ -216,13 +221,13 @@
                         </div>
                         <h3>Pay de limon</h3>
                         <p>El clásico postre frío de limón con galletas María. Cremoso, ácido y facilísimo.</p>
-                        <a href="../pages/Pay-de-limon" class="recipe-btn">Ver receta</a>
+                        <a href="../page/Pay-limon.html" class="recipe-btn">Ver receta</a>
                     </div>
                 </article>
 
                 <article class="recipe-card">
                     <div class="recipe-card-img">
-                        <img src="Reposteria-Online\Imagenes\Pay-de-limon.webp" alt="">
+                        <img src="Reposteria-Online\Imagenes\Pay-de-limon.jpe" alt="Pay-de-limon">
                         <span class="recipe-tag">10 minutos</span>
                     </div>
                     <div class="recipe-info">
@@ -230,21 +235,21 @@
                             <span>⏱ 10 min</span>
                             <span>⭐ Fácil</span>
                         </div>
-                        <h3>Postre de fresa</h3>
-                        <p>Delicioso postre cremoso de fresas con capas de bizcocho suave y crema batida.</p>
-                        <a href="../pages/Postre-fresa.html" class="recipe-btn">Ver receta</a>
+                        <h3>Cheesecake de frutos rojos</h3>
+                        <p>Suave, cremoso y con una base de galleta crujiente. Sin horno y listo en minutos.</p>
+                        <a href="../pages/Cheesecake-de-frutos-rojos" class="recipe-btn">Ver receta</a>
                     </div>
                 </article>
 
                 <article class="recipe-card">
                     <div class="recipe-card-img">
-                        <img src="../Imagenes/Pastel-tres-leches.webp" alt="Pastel-tres-leches">
+                        <img src="../Imagenes/Pastel-tres-leches.webp" alt=Pastel-tres-leches"">
                         <span class="recipe-tag">Clásico</span>
                     </div>
                     <div class="recipe-info">
                         <div class="recipe-meta">
                             <span>⏱ 40 min</span>
-                            <span>🔥 Medio</span>
+                            <span>🌟 Facil</span>
                         </div>
                         <h3>Pastel tres leches</h3>
                         <p>Esponjoso, húmedo y con una crema suave. El favorito de toda la familia en cualquier celebración.</p>
@@ -256,7 +261,7 @@
 
             <div class="more-recipes-cta">
                 <p>¿Quieres ver todas nuestras recetas disponibles?</p>
-                <a href="c:\Users\forta\OneDrive\Escritorio\Reposteria Online\index.html" class="btn-todas-recetas">
+                <a href="index.html" class="btn-todas-recetas">
                     Ver todas las recetas
                     <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" 
                     stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
@@ -303,7 +308,7 @@
                  <!-- Columna marca -->
                   <div class="footer-brand">
                     <a href="index.html" class="footer-logo">
-                        <img src="c:\Users\forta\OneDrive\Escritorio\Reposteria Online\Imagenes\logo.png" width="40" height="40" alt="Logo">
+                        <img src="Reposteria-Online\Imagenes\logo.png" width="40" height="40" alt="Logo">
                         <span class="footer-logo-text">Repostería <span>Online</span></span>
                     </a>
                     <p>Recetas de postres fáciles, cremosos y deliciosos para preparar en casa. Sin horno y sin complicaciones.</p>
@@ -328,10 +333,10 @@
                    <div class="footer-col">
                     <h4>Recetas</h4>
                     <ul>
-                        <li><a href="../pages/Postre-fresa.html">Postre de fresa</a></li>
+                        <li><a href="#">Pay de limon</a></li>
                         <li><a href="#">Tiramisu de fresa</a></li>
                         <li><a href="#">Crepes de fresa</a></li>
-                        <li><a href="../pages/Pastel-tres-leches">Torta tres leches</a></li>
+                        <li><a href="../pages/Pastel-tres-leches.webp">Torta tres leches</a></li>
                         <li><a href="../index.html">Ver todas</a></li>
                     </ul>
                    </div>
@@ -355,6 +360,36 @@
             © 2025 <span>Reposteria Online</span>. Todos los derechos reservados. Hecho con amor.
          </div>
     </footer>
+
+    <script>
+
+        // Menú hamburguesa para móvil
+    const menuToggle = document.getElementById('menuToggle');
+    const navLinks = document.getElementById('navLinks');
+    const button = document.getElementById('navButton')
+    const navOverlay = document.getElementById('navOverlay');
+
+    function cerrarMenu() {
+      menuToggle.classList.remove('active');
+      navLinks.classList.remove('active');
+      button.classList.remove('active')
+      navOverlay.classList.remove('active');
+    }
+
+    menuToggle.addEventListener('click', () => {
+      menuToggle.classList.toggle('active');
+      navLinks.classList.toggle('active');
+      button.classList.toggle('active');
+      navOverlay.classList.toggle('active');
+    });
+
+    navOverlay.addEventListener('click', cerrarMenu);
+
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', cerrarMenu);
+    });
+
+    </script>
 
 </body>
 </html>
