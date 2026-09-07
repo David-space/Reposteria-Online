@@ -496,6 +496,7 @@ h1 {
         .btn-secondary {
             display: inline-block;
             background-color: #1877f2;
+            font-family: "Nunito Sans", sans-serif;
             color: var(--white);
             font-weight: 600;
             padding: 12px 28px;
