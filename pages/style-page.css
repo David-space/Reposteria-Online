@@ -183,6 +183,25 @@ body {
     }
   }
 
+  .button-nav {
+    padding: 12px 20px;
+    font-size: 15px;
+    font-weight: 700;
+    color: #FC4444;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background-color: #ffffff;
+  }
+  
+  .button-nav:hover {
+    transform: scale(1.1);
+  }
+
   /* --- Seccion de Hero --- */
 
   .hero {
