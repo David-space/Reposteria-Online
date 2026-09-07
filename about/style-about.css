@@ -498,15 +498,18 @@ h1 {
             background-color: #1877f2;
             font-family: "Nunito Sans", sans-serif;
             color: var(--white);
+            font-size: 15px;
             font-weight: 600;
             padding: 12px 28px;
             border-radius: 50px;
             text-decoration: none;
-            transition: background 0.3s ease;
+            transition: all 0.3s ease;
         }
 
         .btn-secondary:hover {
+            transform: translateY(-2px);
             background-color: #1464cc;
+            box-shadow: 0 12px 25px rgba(255, 71, 87, 0.4);
         }
 
 
