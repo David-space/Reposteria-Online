@@ -914,6 +914,10 @@ body {
       padding: 10px 30px;
     }
 
+    .hero-text {
+      padding: 0px 30px;
+    }
+
     .hero-container {
       padding: 40px 30px;
     }
