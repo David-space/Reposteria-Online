@@ -3,7 +3,6 @@
 
 html {
   scroll-behavior: smooth;
-  overflow-x: hidden;
 }
 
 * {
@@ -208,7 +207,7 @@ body {
     align-items: center;
     justify-content: space-between;
     gap: 60px;
-    padding: clamp(50px, 10vw, 100px) clamp(20px, 6vw, 100px);
+    padding: 100px 100px;
     overflow: hidden;
     flex-wrap: wrap;
     max-width: 1500px; /* Limita el ancho máximo en pantallas ultra amplias */
@@ -219,9 +218,6 @@ body {
   .hero-text {
     position: relative;
     max-width: 580px;
-    width: 100%;
-    min-width: 0;
-    flex: 1 1 300px;
     line-height: 1.45;
     padding: 0 20px; /* Opcional: agrega margen interno para que el texto no toque los bordes */
   }
@@ -243,7 +239,7 @@ body {
 
   h1 {
     color: #ffffff;
-    font-size: clamp(2.6rem, 11vw, 85px);
+    font-size: 85px;
     font-family: "Sansita", sans-serif;
     font-weight: 800;
     line-height: 1.04;
@@ -303,10 +299,8 @@ body {
 
   .hero-image {
     position: relative;
-    width: 100%;
-    max-width: 600px;
-    min-width: 0;
-    flex: 1 1 280px;
+    width: 600px;
+    max-width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -330,10 +324,8 @@ body {
   .img-hero {
     position: relative;
     z-index: 1;
-    width: 100%;
-    max-width: 500px;
-    height: auto;
-    display: block;
+    width: 500px;
+    height: 580px;
   }
 
   .section-card {
@@ -931,13 +923,18 @@ body {
       padding: 40px 30px;
     }
 
+    h1 {
+      font-size: 2.5rem; /* Ajusta la fuente para pantallas medianas/pequeñas */
+    }
+
     .blob {
       width: 80%;
       height: 80%;
     }
 
     .img-hero {
-      max-width: 400px;
+      width: 400px;
+      height: 470px;
     }
 
     .recipes-grid {
@@ -959,25 +956,9 @@ body {
   @media (max-width: 520px) {
     .footer-bottom { grid-template-columns: 1fr; }
 
-    .hero-text {
-      padding: 0 10px;
-    }
-
     h1 {
-      font-size: 60px;
-    }
-
-    .hero-container {
-      padding-bottom: 50px;
-    }
-
-    .hero-image {
-      max-width: 300px;
-      margin: 10px auto 0;
-    }
-
-    .img-hero {
-      max-width: 100%;
+    font-size: 2rem; /* Tamaño idóneo para móviles */
+    line-height: 1.1;
     }
 
     .features-card {
@@ -986,22 +967,4 @@ body {
     }
 
 
-  }
-
-  @media (max-width: 380px) {
-    .navbar {
-      padding: 10px 16px;
-    }
-
-    .hero-container {
-      padding: 30px 16px 50px;
-    }
-
-    .hero-text {
-      padding: 0 6px;
-    }
-
-    .hero-image {
-      max-width: 260px;
-    }
   }
