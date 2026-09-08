@@ -218,6 +218,8 @@ body {
   .hero-text {
     position: relative;
     max-width: 580px;
+    min-width: 0;
+    flex: 1 1 300px;
     line-height: 1.45;
     padding: 0 20px; /* Opcional: agrega margen interno para que el texto no toque los bordes */
   }
