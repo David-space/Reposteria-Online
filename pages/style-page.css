@@ -1084,5 +1084,10 @@ body {
  
   @media (max-width: 520px) {
     .footer-bottom { grid-template-columns: 1fr; }
+
+    .features-card {
+    grid-template-columns: 1fr; /* Pasa las tarjetas de características a 1 columna */
+    gap: 15px;
+    }
   }
 
