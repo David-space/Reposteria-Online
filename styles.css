@@ -963,6 +963,10 @@ body {
       padding: 0 10px;
     }
 
+    h1 {
+      font-size: 60px;
+    }
+
     .hero-container {
       padding-bottom: 50px;
     }
