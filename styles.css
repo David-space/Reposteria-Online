@@ -920,7 +920,7 @@ body {
     }
 
     h1 {
-      font-size: 80px;
+      font-size: 2.5rem; /* Ajusta la fuente para pantallas medianas/pequeñas */
     }
 
     .blob {
@@ -951,4 +951,20 @@ body {
  
   @media (max-width: 520px) {
     .footer-bottom { grid-template-columns: 1fr; }
+
+    h1 {
+    font-size: 2rem; /* Tamaño idóneo para móviles */
+    line-height: 1.1;
+    }
+
+    .hero-text {
+    padding: 0 10px;
+    }
+
+    .features-card {
+    grid-template-columns: 1fr; /* Pasa las tarjetas de características a 1 columna */
+    gap: 15px;
+    }
+
+
   }
