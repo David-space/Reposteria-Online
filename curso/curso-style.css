@@ -954,3 +954,19 @@ h1 {
     .recipe-cards { grid-template-columns: 1fr; }
     h1 { font-size: 32px; }
 }
+
+@media (max-width: 860px) {
+    .set-subscribe {
+      flex-direction: column;
+      padding: 40px 30px;
+      gap: 30px;
+      text-align: center;
+    }
+    .email input { width: 100%; }
+    .footer-bottom { grid-template-columns: 1fr 1fr; }
+    .footer-brand { grid-column: 1 / -1; }
+  }
+ 
+  @media (max-width: 520px) {
+    .footer-bottom { grid-template-columns: 1fr; }
+  }
