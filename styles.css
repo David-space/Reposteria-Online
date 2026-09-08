@@ -961,7 +961,12 @@ body {
 
     .hero-text {
       padding: 0 10px;
+
     }
+
+    h1 {
+    font-size: 2.2rem; /* Reduce el tamaño explícitamente en teléfonos */
+  }
 
     .features-card {
     grid-template-columns: 1fr; /* Pasa las tarjetas de características a 1 columna */
@@ -978,9 +983,5 @@ body {
 
     .hero-container {
       padding: 30px 16px;
-    }
-
-    h1 {
-      font-size: 70px;
     }
   }
