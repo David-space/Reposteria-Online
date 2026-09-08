@@ -221,6 +221,7 @@ body {
     max-width: 580px;
     width: 100%;
     min-width: 0;
+    flex: 1 1 300px;
     line-height: 1.45;
     padding: 0 20px; /* Opcional: agrega margen interno para que el texto no toque los bordes */
   }
@@ -242,7 +243,7 @@ body {
 
   h1 {
     color: #ffffff;
-    font-size: clamp(2.1rem, 8vw, 85px);
+    font-size: clamp(2.6rem, 11vw, 85px);
     font-family: "Sansita", sans-serif;
     font-weight: 800;
     line-height: 1.04;
