@@ -983,4 +983,8 @@ body {
     .hero-text {
       padding: 0 6px;
     }
+
+    h1 {
+      font-size: 70px;
+    }
   }
