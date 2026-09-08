@@ -961,10 +961,6 @@ body {
     line-height: 1.1;
     }
 
-    .hero-text {
-    padding: 0 10px;
-    }
-
     .features-card {
     grid-template-columns: 1fr; /* Pasa las tarjetas de características a 1 columna */
     gap: 15px;
