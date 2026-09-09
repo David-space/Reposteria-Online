@@ -115,6 +115,74 @@ p { margin: 0; }
     transform: scale(1.1);
 }
 
+/* --- Estilos base para el botón hamburguesa (Oculto en PC) --- */
+.hamburger {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+    z-index: 100;
+}
+
+.hamburger .bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #333; /* Cambia al color de tu texto/icono */
+    transition: 0.3s ease;
+}
+
+.nav-btn-mobile {
+    display: none; /* Oculto en PC */
+}
+
+/* --- Media Query para Celulares (Pantallas menores a 768px) --- */
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex; /* Muestra la hamburguesa */
+    }
+
+    .header-btn-desktop {
+        display: none; /* Oculta el botón externo en móvil */
+    }
+
+    .nav-btn-mobile {
+        display: block; /* Muestra el botón dentro de la lista en móvil */
+    }
+
+    /* Transformamos la lista en un menú desplegable vertical */
+    .nav-links {
+        position: absolute;
+        top: 70px; /* Ajusta según el alto de tu menú */
+        left: -100%; /* Escondido a la izquierda */
+        width: 100%;
+        height: calc(100vh - 70px);
+        background-color: #fff; /* Color de fondo del menú móvil */
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+        padding-top: 3rem;
+        transition: 0.3s ease;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+
+    /* Clase que se activará con JavaScript */
+    .nav-links.active {
+        left: 0; /* Se desliza hacia adentro */
+    }
+
+    /* Opcional: Animación para que la hamburguesa se vuelva una "X" al abrir */
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+}
+
 /* ===== HERO (fondo rojo de marca) ===== */
 .hero-set {
     width: 100%;
