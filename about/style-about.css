@@ -950,6 +950,7 @@ h1 {
 
     .ebook-card {
         grid-template-columns: 1fr;
+        gap: 50px;
     }
 
     .navbar {
