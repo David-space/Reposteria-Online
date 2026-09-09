@@ -139,39 +139,61 @@ p { margin: 0; }
 /* --- Media Query para Celulares (Pantallas menores a 768px) --- */
 @media (max-width: 768px) {
     .hamburger {
-        display: flex; /* Muestra la hamburguesa */
+        display: flex; /* Muestra las 3 líneas */
     }
 
-    .button {
-        display: none; /* Oculta el botón externo en móvil */
+    .header-btn-desktop {
+        display: none; /* Oculta el botón exterior */
     }
 
     .nav-btn-mobile {
-        display: block; /* Muestra el botón dentro de la lista en móvil */
+        display: block; /* Muestra el botón dentro de la lista */
     }
 
-    /* Transformamos la lista en un menú desplegable vertical */
+    /* REVISIÓN DEL CUADRO: Forzamos la visualización y el diseño */
     .nav-links {
-        position: absolute;
-        top: 70px; /* Ajusta según el alto de tu menú */
-        left: -100%; /* Escondido a la izquierda */
-        width: 100%;
-        height: calc(100vh - 70px);
-        background-color: #fff; /* Color de fondo del menú móvil */
-        flex-direction: column;
+        display: flex !important; /* Asegura que el contenedor se pinte */
+        flex-direction: column !important; /* Los enlaces se apilan verticalmente */
+        justify-content: flex-start;
         align-items: center;
-        gap: 2rem;
-        padding-top: 3rem;
-        transition: 0.3s ease;
-        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        gap: 2.5rem;
+        padding-top: 4rem;
+
+        /* Posicionamiento para el deslizamiento lateral */
+        position: fixed; /* 'fixed' evita que se mueva si haces scroll */
+        top: 0;
+        right: -100%; /* Empieza escondido totalmente a la derecha */
+        width: 70%; /* Ocupará el 70% del ancho de la pantalla del celular */
+        height: 100vh; /* Ocupa todo el alto de la pantalla */
+        
+        /* Apariencia del cuadro */
+        background-color: #ffffff; /* ¡Cambia este color si tu fondo es oscuro! */
+        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.2); /* Sombra lateral */
+        z-index: 99; /* Se posiciona debajo del botón hamburguesa */
+        
+        /* Animación suave de deslizamiento */
+        transition: right 0.4s ease-in-out; 
     }
 
-    /* Clase que se activará con JavaScript */
+    /* Cuando se activa, se desliza hacia la pantalla */
     .nav-links.active {
-        left: 0; /* Se desliza hacia adentro */
+        right: 0; /* Se pega al borde derecho */
     }
 
-    /* Opcional: Animación para que la hamburguesa se vuelva una "X" al abrir */
+    /* Ajuste para los elementos de la lista */
+    .nav-links li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-links a {
+        display: block;
+        font-size: 1.2rem;
+        color: #333333; /* Color del texto de tus enlaces */
+        text-decoration: none;
+    }
+
+    /* Animación de la hamburguesa en "X" (se mantiene igual) */
     .hamburger.active .bar:nth-child(1) {
         transform: translateY(8px) rotate(45deg);
     }
