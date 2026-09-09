@@ -1083,7 +1083,7 @@ h1 {
     .nav-links { display: none; } /* pendiente: agregar menú hamburguesa si lo necesitas */
     .for-you-grid { grid-template-columns: 1fr; }
     .recipe-cards { grid-template-columns: 1fr; }
-    h1 { font-size: 36px; }
+    h1 { font-size: 38px; }
 }
 
 @media (max-width: 860px) {
