@@ -78,110 +78,137 @@ body {
     width: 100%;
   }
 
-  /* ===== MENU HAMBURGUESA (móvil) ===== */
-  .menu-toggle {
+  /* --- Estilos base para el botón hamburguesa (Oculto en PC) --- */
+  .hamburger {
     display: none;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 30px;
-    height: 22px;
-    background: none;
-    border: none;
     cursor: pointer;
-    z-index: 30;
+    flex-direction: column;
+    gap: 5px;
+    z-index: 100;
   }
 
-  .menu-toggle span {
+  .hamburger .bar {
     display: block;
+    width: 25px;
     height: 3px;
-    width: 100%;
-    background: #db0000;
-    border-radius: 3px;
-    transition: all 0.3s ease;
+    background-color: #ffffff; /* Cambia al color de tu texto/icono */
+    transition: 0.3s ease;
   }
 
-  .menu-toggle.active span:nth-child(1) {
-    transform: translateY(9px) rotate(45deg);
-  }
-  .menu-toggle.active span:nth-child(2) {
-    opacity: 0;
-  }
-  .menu-toggle.active span:nth-child(3) {
-    transform: translateY(-9px) rotate(-45deg);
+  .nav-btn-mobile {
+    display: none; /* Oculto en PC */
   }
 
-  .nav-overlay {
-    display: none;
-  }
-
-  @media (max-width: 900px) {
-    .menu-toggle {
-      display: flex;
-      flex-direction: column;
-    }
-
-    .nav-links {
-      position: fixed;
-      top: 0;
-      right: -100%;
-      height: 100vh;
-      width: 70%;
-      max-width: 300px;
-      background: #fff;
-      flex-direction: column;
-      align-items: flex-start;
-      justify-content: center;
-      gap: 35px;
-      padding: 40px;
-      box-shadow: -5px 0 25px rgba(0,0,0,0.15);
-      transition: right 0.4s ease;
-      z-index: 25;
+  /* --- Media Query para Celulares (Pantallas menores a 768px) --- */
+  @media (max-width: 768px) {
+    .hamburger {
+        display: flex; /* Muestra las 3 líneas */
     }
 
     .button {
-      position: fixed;
-      top: 0;
-      right: -100%;
-      height: 100vh;
-      width: 70%;
-      max-width: 300px;
-      display: flex;
-      align-items: flex-end;
-      justify-content: center;
-      padding-bottom: 60px;
-      transition: right 0.4s ease;
-      z-index: 26;
-      pointer-events: none;
+        display: none; /* Oculta el botón exterior */
     }
 
-    .button.active {
-      right: 0;
-      pointer-events: auto;
+    /* Color de las líneas de la X cuando el menú está ABIERTO */
+    .hamburger.active .bar {
+        background-color: #000000; /* Puedes cambiar #000000 por el color oscuro que quieras */
     }
 
+    .nav-btn-mobile {
+        display: block; /* Muestra el botón dentro de la lista */
+    }
+
+    .btn-nav-cel {
+    padding: 12px 20px;
+    font-size: 15px;
+    font-weight: 700;
+    color: #ffffff;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    display: inline-flex;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 8px;
+    background-color: #FC4444;
+    }
+
+    .btn-nav-cel:hover {
+    transform: scale(1.1);
+    box-shadow: 0 10px 24px rgba(252, 68, 68, 0.35);
+    }
+
+    /* REVISIÓN DEL CUADRO: Forzamos la visualización y el diseño */
+    .nav-links {
+        display: flex !important; /* Asegura que el contenedor se pinte */
+        flex-direction: column !important; /* Los enlaces se apilan verticalmente */
+        justify-content: flex-start;
+        align-items: center;
+        gap: 2.5rem;
+        padding-top: 4rem;
+
+        /* Posicionamiento para el deslizamiento lateral */
+        position: fixed; /* 'fixed' evita que se mueva si haces scroll */
+        top: 0;
+        right: -100%; /* Empieza escondido totalmente a la derecha */
+        width: 70%; /* Ocupará el 70% del ancho de la pantalla del celular */
+        height: 100vh; /* Ocupa todo el alto de la pantalla */
+        
+        /* Apariencia del cuadro */
+        background-color: #ffffff; /* ¡Cambia este color si tu fondo es oscuro! */
+        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.2); /* Sombra lateral */
+        z-index: 99; /* Se posiciona debajo del botón hamburguesa */
+        
+        /* Animación suave de deslizamiento */
+        transition: right 0.4s ease-in-out; 
+    }
+
+    /* Color del enlace activo dentro del menú móvil */
+    .nav-links a.active {
+    color: #373030 !important; /* Un gris casi negro muy legible */
+    font-weight: bold;         /* Opcional: lo hace resaltar un poco más */
+    border-bottom: 2px solid #000000; /* Opcional: una línea abajo para marcar dónde está */
+    padding-bottom: 4px;
+    }
+
+    /* Cuando se activa, se desliza hacia la pantalla */
     .nav-links.active {
-      right: 0;
+        right: 0; /* Se pega al borde derecho */
     }
 
-    .nav-links.active a {
-      color: var(--color-texto);
+    /* Ajuste para los elementos de la lista */
+    .nav-links li {
+        width: 100%;
+        text-align: center;
     }
 
-    .nav-links.active a:hover {
-      color: var(--color-acento);
+    .nav-links a {
+        display: block;
+        font-size: 16px;
+        color: #292929; /* Color del texto de tus enlaces */
+        text-decoration: none;
     }
 
-    .nav-overlay.active {
-      display: block;
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0,0,0,0.35);
-      z-index: 20;
+    .nav-links a:hover{
+        display: block;
+        font-size: 16px;
+        color: #2b2b2b; /* Color del texto de tus enlaces */
+        text-decoration: none;
+    }
+
+    /* Animación de la hamburguesa en "X" (se mantiene igual) */
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
     }
   }
+
 
   .button-nav {
     padding: 12px 20px;
