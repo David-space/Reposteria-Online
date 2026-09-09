@@ -208,7 +208,6 @@ p { margin: 0; }
     font-weight: bold;         /* Opcional: lo hace resaltar un poco más */
     border-bottom: 2px solid #000000; /* Opcional: una línea abajo para marcar dónde está */
     padding-bottom: 4px;
-    width: 50%;
     }
 
     /* Cuando se activa, se desliza hacia la pantalla */
