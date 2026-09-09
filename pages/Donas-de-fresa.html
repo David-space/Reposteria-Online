@@ -17,17 +17,14 @@
                 </a>
             </div>
 
-            <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">
-               <span></span>
-               <span></span>
-               <span></span>
-            </button>
-
-            <div class="nav-links" id="navLinks">
+            <div class="nav-links" id="nav-links">
                 <li><a href="../index.html">Inicio</a></li>
                 <li><a href="../Tips/tips.html">Tips</a></li>
                 <li><a href="../curso/curso.html">Curso</a></li>
                 <li><a href="../about/about.html">Sobre nosotros</a></li>
+
+                <!-- Metemos el botón aquí para que en móvil caiga dentro del menú -->
+                <li class="nav-btn-mobile"><button class="btn-nav-cel">¡VISITANOS!</button></li>
             </div>
             <div class="button" id="navButton">
                 <a href="https://www.facebook.com/profile.php?id=61555227377096">
@@ -35,7 +32,12 @@
                 </a>
             </div>
 
-            <div class="nav-overlay" id="navOverlay"></div>
+            <!-- El nuevo icono de hamburguesa -->
+            <div class="hamburger" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
         </div>
     </nav>
 
@@ -369,31 +371,14 @@
 
     <script>
 
-        // Menú hamburguesa para móvil
-    const menuToggle = document.getElementById('menuToggle');
-    const navLinks = document.getElementById('navLinks');
-    const button = document.getElementById('navButton')
-    const navOverlay = document.getElementById('navOverlay');
+        // Menu de Hamburguesa para mobiles
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('nav-links');
 
-    function cerrarMenu() {
-      menuToggle.classList.remove('active');
-      navLinks.classList.remove('active');
-      button.classList.remove('active')
-      navOverlay.classList.remove('active');
-    }
-
-    menuToggle.addEventListener('click', () => {
-      menuToggle.classList.toggle('active');
-      navLinks.classList.toggle('active');
-      button.classList.toggle('active');
-      navOverlay.classList.toggle('active');
-    });
-
-    navOverlay.addEventListener('click', cerrarMenu);
-
-    navLinks.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', cerrarMenu);
-    });
+        hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('active');
+        navLinks.classList.toggle('active');
+        });
 
     </script>
 
