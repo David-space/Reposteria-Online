@@ -227,6 +227,13 @@ p { margin: 0; }
         text-decoration: none;
     }
 
+    .nav-links a:hover{
+        display: block;
+        font-size: 16px;
+        color: #2b2b2b; /* Color del texto de tus enlaces */
+        text-decoration: none;
+    }
+
     /* Animación de la hamburguesa en "X" (se mantiene igual) */
     .hamburger.active .bar:nth-child(1) {
         transform: translateY(8px) rotate(45deg);
@@ -1076,7 +1083,7 @@ h1 {
     .nav-links { display: none; } /* pendiente: agregar menú hamburguesa si lo necesitas */
     .for-you-grid { grid-template-columns: 1fr; }
     .recipe-cards { grid-template-columns: 1fr; }
-    h1 { font-size: 32px; }
+    h1 { font-size: 36px; }
 }
 
 @media (max-width: 860px) {
