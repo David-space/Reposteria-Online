@@ -142,7 +142,7 @@ p { margin: 0; }
         display: flex; /* Muestra la hamburguesa */
     }
 
-    .header-btn-desktop {
+    .button {
         display: none; /* Oculta el botón externo en móvil */
     }
 
