@@ -182,7 +182,6 @@ p { margin: 0; }
         flex-direction: column !important; /* Los enlaces se apilan verticalmente */
         justify-content: flex-start;
         align-items: center;
-        justify-items: center;
         gap: 2.5rem;
         padding-top: 4rem;
 
