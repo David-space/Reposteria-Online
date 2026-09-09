@@ -142,7 +142,7 @@ p { margin: 0; }
         display: flex; /* Muestra las 3 líneas */
     }
 
-    .header-btn-desktop {
+    .button {
         display: none; /* Oculta el botón exterior */
     }
 
