@@ -947,6 +947,9 @@ h1 {
   }
  
   @media (max-width: 520px) {
+    .navbar {
+        padding: 10px 30px;
+    }
     .footer-bottom { grid-template-columns: 1fr; }
   }
 
