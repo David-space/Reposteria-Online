@@ -128,7 +128,7 @@ p { margin: 0; }
     display: block;
     width: 25px;
     height: 3px;
-    background-color: #333; /* Cambia al color de tu texto/icono */
+    background-color: #ffffff; /* Cambia al color de tu texto/icono */
     transition: 0.3s ease;
 }
 
