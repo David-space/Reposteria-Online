@@ -146,6 +146,11 @@ p { margin: 0; }
         display: none; /* Oculta el botón exterior */
     }
 
+    /* Color de las líneas de la X cuando el menú está ABIERTO */
+    .hamburger.active .bar {
+        background-color: #000000; /* Puedes cambiar #000000 por el color oscuro que quieras */
+    }
+
     .nav-btn-mobile {
         display: block; /* Muestra el botón dentro de la lista */
     }
@@ -176,6 +181,14 @@ p { margin: 0; }
         transition: right 0.4s ease-in-out; 
     }
 
+    /* Color del enlace activo dentro del menú móvil */
+    .nav-links a.active {
+    color: #373030 !important; /* Un gris casi negro muy legible */
+    font-weight: bold;         /* Opcional: lo hace resaltar un poco más */
+    border-bottom: 2px solid #000000; /* Opcional: una línea abajo para marcar dónde está */
+    padding-bottom: 4px;
+    }
+
     /* Cuando se activa, se desliza hacia la pantalla */
     .nav-links.active {
         right: 0; /* Se pega al borde derecho */
@@ -190,7 +203,7 @@ p { margin: 0; }
     .nav-links a {
         display: block;
         font-size: 16px;
-        color: #333333; /* Color del texto de tus enlaces */
+        color: #292929; /* Color del texto de tus enlaces */
         text-decoration: none;
     }
 
