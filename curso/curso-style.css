@@ -164,7 +164,7 @@ p { margin: 0; }
     cursor: pointer;
     transition: all 0.3s ease;
     border: 2px solid transparent;
-    display: flex;
+    display: inline-flex;
     align-items: flex-end;
     justify-content: center;
     gap: 8px;
