@@ -115,7 +115,7 @@ body {
     }
 
     /* Ocultamos el botón de escritorio y mostramos el de la lista móvil */
-    .header-btn-desktop {
+    .button {
         display: none;
     }
     
