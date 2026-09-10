@@ -576,6 +576,7 @@ p { margin: 0; }
 }
 
 @media (max-width: 560px) {
+    .footer-bottom { grid-template-columns: 1fr; }
     .nav-links { display: none; }
     .tip-cards { grid-template-columns: 1fr; }
     .featured-card { padding: 30px 24px; }
