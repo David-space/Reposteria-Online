@@ -962,7 +962,7 @@ body {
     .footer-bottom { grid-template-columns: 1fr; }
 
     h1 {
-    font-size: 50px; /* Tamaño idóneo para móviles */
+    font-size: 55px; /* Tamaño idóneo para móviles */
     line-height: 1.1;
     }
 
