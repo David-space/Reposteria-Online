@@ -20,10 +20,20 @@
                 <li><a href="" class="active">Tips</a></li>
                 <li><a href="../curso/curso.html">Curso</a></li>
                 <li><a href="../about/about.html">Sobre nosotros</a></li>
+
+                <!-- Metemos el botón aquí para que en móvil caiga dentro del menú -->
+                <li class="nav-btn-mobile"><a href="https://www.facebook.com/profile.php?id=61555227377096"><button class="btn-nav-cel">¡VISITANOS!</button></a></li>
             </ul>
 
             <div class="button">
                 <button class="btn-nav">¡VISITANOS!</button>
+            </div>
+
+            <!-- El nuevo icono de hamburguesa -->
+            <div class="hamburger" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
             </div>
         </div>
     </nav>
@@ -221,6 +231,17 @@
     </footer>
 
     <script>
+
+        // Menu de Hamburguesa para mobiles
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('nav-links');
+
+        hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('active');
+        navLinks.classList.toggle('active');
+        });
+
+        
         // Lógica de suscripción
         const form = document.getElementById('subscribeForm');
         const successMsg = document.getElementById('successMsg');
