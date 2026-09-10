@@ -196,7 +196,10 @@ body {
 
   .button-nav:hover {
     transform: scale(1.1);
+    box-shadow: 0 10px 24px rgba(252, 68, 68, 0.35);
   }
+
+  /*---- SECCION DE HERO ----*/
 
   .hero {
     max-width: 100%;
