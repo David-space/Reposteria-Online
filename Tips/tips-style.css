@@ -573,6 +573,7 @@ p { margin: 0; }
     .nav-links { gap: 24px; }
     .tips-hero h1 { font-size: 34px; }
     .tip-cards { grid-template-columns: repeat(2, 1fr); }
+    .footer-bottom { grid-template-columns: 1fr 1fr; }
 }
 
 @media (max-width: 560px) {
