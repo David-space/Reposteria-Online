@@ -971,7 +971,7 @@ body {
     .footer-bottom { grid-template-columns: 1fr; }
 
     .hero-container {
-      padding: 30px 30px;
+      padding: 20px 30px;
     }
 
     h1 {
