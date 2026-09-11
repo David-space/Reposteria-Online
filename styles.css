@@ -547,23 +547,19 @@ body {
 }
 
 .recipe-card {
-  position: relative; /* ¡CRUCIAL! Esto encapsula el enlace expandido dentro de la tarjeta */
   background-color: #ffffff;
   border-radius: 20px;
-  /* overflow: hidden; <- BORRA O COMENTA ESTA LÍNEA */
+  overflow: hidden; /* Corta la imagen en las esquinas superiores */
   box-shadow: 0 8px 24px rgba(252, 68, 68, 0.10);
   border: 1px solid #f5eeee;
   transition: all 0.3s ease;
   display: flex;
   flex-direction: column;
-
-  touch-action: manipulation; 
 }
 
 .recipe-card:hover {
   transform: translateY(-6px);
   box-shadow: 0 16px 36px rgba(252, 68, 68, 0.18);;
-  cursor: pointer; /* Cambia el cursor a mano en toda la tarjeta */
 }
 
 /* Contenedor de imagen con posición relativa para el tag */
@@ -631,7 +627,6 @@ body {
   flex-grow: 1;
 }
 
-/* 1. ASEGURA EL CONTENEDOR DEL ENLACE */
 .recipe-btn {
   display: inline-block;
   align-self: flex-start;
@@ -643,31 +638,11 @@ body {
   text-decoration: none;
   padding: 9px 20px;
   border-radius: 30px;
-  transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
-  transform: translateZ(0);
-  will-change: background-color, transform;
-  position: relative; 
-  
-  /* CRUCIAL: El botón no debe aislar la capa invisible */
-  position: static; 
+  transition: all 0.3s ease;
 }
 
-/* 2. LA CAPA INVISIBLE QUE SE ADUEÑA DE TODA LA TARJETA */
-.recipe-btn::after {
-  content: "";
-  position: absolute;
-  /* Forzamos que busque los límites de .recipe-card rompiendo el contenedor del botón */
-  top: -330px; /* Ajuste aproximado para cubrir la foto hacia arriba */
-  right: -22px;
-  bottom: -24px;
-  left: -20px;
-  z-index: 10; 
-  pointer-events: auto; 
-}
-
-/* 3. EFECTO HOVER CUANDO TOCAS LA TARJETA */
-.recipe-card:hover .recipe-btn {
-  background-color: #db3232;
+.recipe-btn:hover {
+  background: #d93232;
   transform: scale(1.04);
 }
 
