@@ -550,7 +550,7 @@ body {
   position: relative; /* ¡CRUCIAL! Esto encapsula el enlace expandido dentro de la tarjeta */
   background-color: #ffffff;
   border-radius: 20px;
-  overflow: hidden; /* Corta la imagen en las esquinas superiores */
+  /* overflow: hidden; <- BORRA O COMENTA ESTA LÍNEA */
   box-shadow: 0 8px 24px rgba(252, 68, 68, 0.10);
   border: 1px solid #f5eeee;
   transition: all 0.3s ease;
@@ -672,6 +672,8 @@ body {
   background-color: #db3232;
   transform: scale(1.04);
 }
+
+
 .contain-more-recipes {
   max-width:100%;
   height: 100px;
