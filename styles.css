@@ -649,7 +649,7 @@ body {
 }
 
 /* Esta es la magia: expande el área cliqueable del botón a toda la tarjeta (.recipe-card) */
-.btn-recipe::after {
+.recipe-btn::after {
   content: "";
   position: absolute;
   top: 0;
@@ -660,7 +660,7 @@ body {
 }
 
 /* Efecto visual extra en el botón cuando pasas el mouse por la tarjeta */
-.recipe-card:hover .btn-recipe {
+.recipe-card:hover .recipe-btn {
   background-color: #db3232;
 }
 
