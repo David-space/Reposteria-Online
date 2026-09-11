@@ -661,6 +661,9 @@ body {
   bottom: 0;
   left: 0;
   z-index: 1;
+
+   /* Evita bloqueos de eventos fantasma */
+  pointer-events: auto; 
 }
 
 /* 2. CORRECCIÓN: El efecto visual ocurre cuando pasas el mouse por CUALQUIER parte de la tarjeta */
