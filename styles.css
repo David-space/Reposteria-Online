@@ -547,6 +547,7 @@ body {
 }
 
 .recipe-card {
+  position: relative; /* ¡CRUCIAL! Esto encapsula el enlace expandido dentro de la tarjeta */
   background-color: #ffffff;
   border-radius: 20px;
   overflow: hidden; /* Corta la imagen en las esquinas superiores */
@@ -560,6 +561,7 @@ body {
 .recipe-card:hover {
   transform: translateY(-6px);
   box-shadow: 0 16px 36px rgba(252, 68, 68, 0.18);;
+  cursor: pointer; /* Cambia el cursor a mano en toda la tarjeta */
 }
 
 /* Contenedor de imagen con posición relativa para el tag */
@@ -644,6 +646,22 @@ body {
 .recipe-btn:hover {
   background: #d93232;
   transform: scale(1.04);
+}
+
+/* Esta es la magia: expande el área cliqueable del botón a toda la tarjeta (.recipe-card) */
+.btn-recipe::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+}
+
+/* Efecto visual extra en el botón cuando pasas el mouse por la tarjeta */
+.recipe-card:hover .btn-recipe {
+  background-color: #db3232;
 }
 
 .contain-more-recipes {
