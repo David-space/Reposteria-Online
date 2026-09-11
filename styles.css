@@ -655,15 +655,12 @@ body {
 .recipe-btn::after {
   content: "";
   position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  
-  /* CRUCIAL: z-index alto para ponerse POR ENCIMA de fotos y textos */
+  /* Forzamos que busque los límites de .recipe-card rompiendo el contenedor del botón */
+  top: -330px; /* Ajuste aproximado para cubrir la foto hacia arriba */
+  right: -22px;
+  bottom: -24px;
+  left: -20px;
   z-index: 10; 
-  
-  /* Asegura que reciba todos los clics directamente */
   pointer-events: auto; 
 }
 
