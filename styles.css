@@ -640,15 +640,16 @@ body {
   text-decoration: none;
   padding: 9px 20px;
   border-radius: 30px;
-  transition: all 0.3s ease;
+  
+  /* 1. CORRECCIÓN: Animamos SOLO el fondo y la transformación de forma limpia */
+  transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
+  
+  /* Evita micro-vibraciones del texto al animar */
+  transform: translateZ(0);
+  will-change: background-color, transform;
 }
 
-.recipe-btn:hover {
-  background: #d93232;
-  transform: scale(1.04);
-}
-
-/* Esta es la magia: expande el área cliqueable del botón a toda la tarjeta (.recipe-card) */
+/* La magia: expande el área cliqueable del botón a toda la tarjeta */
 .recipe-btn::after {
   content: "";
   position: absolute;
@@ -659,9 +660,10 @@ body {
   z-index: 1;
 }
 
-/* Efecto visual extra en el botón cuando pasas el mouse por la tarjeta */
+/* 2. CORRECCIÓN: El efecto visual ocurre cuando pasas el mouse por CUALQUIER parte de la tarjeta */
 .recipe-card:hover .recipe-btn {
-  background-color: #db3232;
+  background-color: #db3232; /* Un solo color unificado */
+  transform: scale(1.04);     /* El botón se agranda sutilmente de forma fluida */
 }
 
 .contain-more-recipes {
