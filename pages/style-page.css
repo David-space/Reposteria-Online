@@ -664,6 +664,7 @@ body {
   .recipe-card:hover {
     transform: translateY(-6px);
     box-shadow: 0 16px 36px rgba(252, 68, 68, 0.18);
+    cursor: pointer;
   }
 
   /* Contenedor de imagen con posición relativa para el tag */
