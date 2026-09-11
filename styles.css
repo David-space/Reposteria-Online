@@ -646,6 +646,7 @@ body {
   transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
   transform: translateZ(0);
   will-change: background-color, transform;
+  position: relative; 
   
   /* CRUCIAL: El botón no debe aislar la capa invisible */
   position: static; 
