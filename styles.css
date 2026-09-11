@@ -970,6 +970,10 @@ body {
   @media (max-width: 520px) {
     .footer-bottom { grid-template-columns: 1fr; }
 
+    .hero-container {
+      padding: 30px 30px;
+    }
+
     h1 {
     font-size: 60px; /* Tamaño idóneo para móviles */
     line-height: 1.1;
